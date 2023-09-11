@@ -1,0 +1,140 @@
+-- Task 1. Получить полную информацию обо всех преподавателях.
+SELECT * FROM professors;
+
+-- Task 2. Получить полную информацию обо всех студенческих группах на специальности ЭВМ.
+SELECT * FROM student_groups WHERE speciality = 'ЭВМ';
+
+-- Task 3. Получить личный номер преподавателя и номера аудиторий, в которых они преподают предмет с кодовым номером 18П.
+SELECT professor_personal_number, audience FROM professors_subjects WHERE subject_code_number = '18П';
+
+-- Task 4. Получить номера предметов и названия предметов, которые ведет преподаватель Костин.
+SELECT code_number, name FROM subjects WHERE code_number in
+(SELECT subject_code_number from professors_subjects WHERE professor_personal_number =
+(SELECT personal_number FROM professors WHERE last_name = 'Костин'));
+
+-- Task 5. Получить номер группы, в которой ведутся предметы преподавателем Фроловым.
+SELECT code_number FROM student_groups WHERE code_number in
+(SELECT group_code_number from professors_subjects WHERE professor_personal_number =
+(SELECT personal_number FROM professors WHERE last_name = 'Фролов'));
+
+-- Task 6. Получить информацию о предметах, которые ведутся на специальности АСОИ.
+SELECT * FROM subjects WHERE speciality = 'АСОИ';
+
+-- Task 7. Получить информацию о преподавателях, которые ведут предметы на специальности АСОИ.
+SELECT * FROM professors WHERE speciality LIKE '%АСОИ%';
+
+-- Task 8. Получить фамилии преподавателей, которые ведут предметы в 210 аудитории.
+SELECT DISTINCT last_name FROM professors JOIN professors_subjects
+ON professors.personal_number = professors_subjects.professor_personal_number
+WHERE professors_subjects.audience = 210;
+
+-- Task 9. Получить названия предметов и названия групп, которые ведут занятия в аудиториях с 100 по 200.
+SELECT DISTINCT subjects.name AS subject_name, student_groups.name AS group_name FROM professors_subjects
+JOIN subjects ON professors_subjects.subject_code_number = subjects.code_number
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE professors_subjects.audience >= 100 AND professors_subjects.audience <= 200;
+
+-- Task 10. Получить пары номеров групп с одной специальности.
+SELECT first_group.code_number, second_group.code_number FROM student_groups AS first_group JOIN student_groups AS second_group ON
+first_group.speciality = second_group.speciality;
+
+-- Task 11. Получить общее количество студентов, обучающихся на специальности ЭВМ.
+SELECT SUM(student_groups.student_amount) AS student_amount FROM student_groups WHERE
+speciality = 'ЭВМ';
+
+-- Task 12. Получить номера преподавателей, обучающих студентов по специальности ЭВМ.
+SELECT DISTINCT professors_subjects.professor_personal_number FROM professors_subjects
+JOIN professors ON professors_subjects.professor_personal_number = professors.personal_number
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE student_groups.speciality = 'ЭВМ';
+
+-- Task 13. Получить номера предметов, изучаемых всеми студенческими группами.
+SELECT professors_subjects.subject_code_number FROM professors_subjects
+GROUP BY professors_subjects.subject_code_number
+HAVING COUNT(*) = (SELECT COUNT(*) FROM student_groups);
+
+-- Task 14. Получить фамилии преподавателей, преподающих те же предметы, что и преподаватель преподающий предмет с номером 14П.
+SELECT professors.last_name FROM professors WHERE professors.last_name NOT IN
+(
+    SELECT DISTINCT professors.last_name FROM professors
+    JOIN professors_subjects ON professors.personal_number = professors_subjects.professor_personal_number
+    WHERE professors_subjects.subject_code_number NOT IN
+        (SELECT DISTINCT professors_subjects.subject_code_number FROM professors_subjects
+        WHERE professors_subjects.professor_personal_number = 
+            (SELECT DISTINCT professors_subjects.professor_personal_number FROM professors_subjects WHERE
+            professors_subjects.subject_code_number = '14П')
+)
+);
+
+-- Task 15. Получить информацию о предметах, которые не ведет преподаватель с личным номером 221П.
+SELECT DISTINCT * FROM subjects WHERE subjects.code_number NOT IN
+(SELECT DISTINCT professors_subjects.subject_code_number FROM professors_subjects
+WHERE professors_subjects.professor_personal_number = '221Л');
+
+-- Task 16. Получить информацию о предметах, которые не изучаются в группе М-6.
+SELECT DISTINCT * FROM subjects WHERE subjects.code_number NOT IN
+(SELECT professors_subjects.subject_code_number FROM professors_subjects
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE student_groups.name = 'М-6');
+
+-- Task 17. Получить информацию о доцентах, преподающих в группах 3Г и 8Г.
+SELECT DISTINCT professors.* FROM professors_subjects
+JOIN professors ON professors_subjects.professor_personal_number = professors.personal_number
+WHERE professors.position = 'Доцент' AND professors_subjects.group_code_number IN ('3Г', '8Г');
+
+-- Task 18. Получить номера предметов, номера преподавателей, номера групп, в которых ведут занятия преподаватели с кафедры ЭВМ, имеющих специальность АСОИ.
+SELECT professors_subjects.subject_code_number, professors_subjects.professor_personal_number, professors_subjects.group_code_number
+FROM professors_subjects JOIN professors ON professors_subjects.professor_personal_number = professors.personal_number
+WHERE professors.department = 'ЭВМ' AND professors.speciality LIKE '%АСОИ%';
+
+-- Task 19. Получить номера групп с такой же специальностью, что и специальность преподавателей.
+SELECT DISTINCT student_groups.code_number FROM professors
+JOIN student_groups ON professors.speciality LIKE (SELECT '%' || student_groups.speciality || '%' FROM student_groups);
+
+-- Task 20. Получить номера преподавателей с кафедры ЭВМ, преподающих предметы по специальности, совпадающей со специальностью студенческой группы.
+SELECT DISTINCT professors.personal_number FROM professors_subjects
+JOIN professors ON professors_subjects.professor_personal_number = professors.personal_number
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE professors.department = 'ЭВМ' AND professors.speciality = student_groups.speciality;
+
+-- Task 21. Получить специальности студенческой группы, на которых работают преподаватели кафедры АСУ.
+SELECT DISTINCT student_groups.speciality FROM professors_subjects
+JOIN professors ON professors_subjects.professor_personal_number = professors.personal_number
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE professors.department = 'АСУ';
+
+-- Task 22. Получить номера предметов, изучаемых группой АС-8.
+SELECT DISTINCT professors_subjects.subject_code_number FROM professors_subjects
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE student_groups.name = 'АС-8';
+
+-- Task 23. Получить номера студенческих групп, которые изучают те же предметы, что и студенческая группа АС-8.
+SELECT DISTINCT professors_subjects.group_code_number FROM professors_subjects
+WHERE professors_subjects.subject_code_number IN (
+SELECT DISTINCT professors_subjects.subject_code_number FROM professors_subjects
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE student_groups.name = 'АС-8'
+);
+
+-- Task 24. Получить номера студенческих групп, которые не изучают предметы, преподаваемых в студенческой группе АС-8.
+SELECT DISTINCT professors_subjects.group_code_number FROM professors_subjects
+WHERE professors_subjects.subject_code_number NOT IN (
+SELECT DISTINCT professors_subjects.subject_code_number FROM professors_subjects
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE student_groups.name = 'АС-8'
+);
+
+-- Task 25. Получить номера студенческих групп, которые не изучают предметы, преподаваемых преподавателем 430Л.
+SELECT DISTINCT professors_subjects.group_code_number FROM professors_subjects
+WHERE professors_subjects.subject_code_number NOT IN (
+SELECT DISTINCT professors_subjects.subject_code_number FROM professors_subjects
+JOIN professors ON professors_subjects.professor_personal_number = professors.personal_number
+WHERE professors.personal_number = '430Л'
+);
+
+-- Task 26. Получить номера преподавателей, работающих с группой Э-15, но не преподающих предмет 12П.
+SELECT professors_subjects.professor_personal_number FROM professors_subjects
+JOIN student_groups ON professors_subjects.group_code_number = student_groups.code_number
+WHERE student_groups.name = 'Э-15' AND professors_subjects.professor_personal_number NOT IN
+(SELECT DISTINCT professors_subjects.professor_personal_number FROM professors_subjects
+WHERE professors_subjects.subject_code_number = '12П');

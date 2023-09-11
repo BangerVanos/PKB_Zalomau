@@ -1,0 +1,34 @@
+CREATE TABLE professors (
+    personal_number VARCHAR (4) PRIMARY KEY,
+    last_name       VARCHAR (50),
+    position        VARCHAR (50),
+    department      VARCHAR (50),
+    speciality      VARCHAR (50),
+    domestic_phone  VARCHAR (3) 
+);
+
+CREATE TABLE subjects (
+    code_number  VARCHAR (3) PRIMARY KEY,
+    name         VARCHAR (50),
+    hours_amount SMALLINT,
+    speciality   VARCHAR (50),
+    semester     TINYINT
+);
+
+CREATE TABLE student_groups (
+    code_number       VARCHAR (3) PRIMARY KEY,
+    name              VARCHAR (4),
+    student_amount    TINYINT,
+    speciality        VARCHAR (50),
+    headman_last_name VARCHAR (50) 
+);
+
+CREATE TABLE professors_subjects (
+  group_code_number VARCHAR (3),
+  subject_code_number VARCHAR (3),
+  professor_personal_number VARCHAR (4),
+  audience VARCHAR (3),
+  FOREIGN KEY (group_code_number) REFERENCES student_groups (code_number) ON DELETE SET NULL,
+  FOREIGN KEY (subject_code_number) REFERENCES subjects (code_number) ON DELETE SET NULL,
+  FOREIGN KEY (professor_personal_number) REFERENCES professors (personal_number) ON DELETE SET NULL  
+);

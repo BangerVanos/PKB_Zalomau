@@ -1,0 +1,15 @@
+CREATE TABLE professors (
+    personal_number VARCHAR (4),
+    last_name       VARCHAR (50),
+    position         VARCHAR (50),
+    department      VARCHAR (50),
+    speciality      VARCHAR (50),
+    domestic_phone  VARCHAR (10) 
+);
+
+INSERT INTO professors (personal_number, last_name, position, department, speciality, domestic_phone) VALUES
+('221Л', 'Фролов', 'Доцент', 'ЭВМ', 'АСОИ, ЭВМ', 487),
+('222Л', 'Костин', 'Доцент', 'ЭВМ', 'ЭВМ', 543),
+('225Л', 'Бойко', 'Профессор', 'АСУ', 'АСОИ, ЭВМ', 112),
+('430Л', 'Глазов', 'Ассистент', 'ТФ', 'СД', 421),
+('110Л', 'Петров', 'Ассистент', 'Экономики', 'Международная экономика', 324);
