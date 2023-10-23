@@ -91,7 +91,7 @@ class Position(Base):
 
 
 class DepPosAssociation(Base):
-    __tablename__ = 'gen'
+    __tablename__ = 'department_position_association'
 
     position_id: Mapped[int] = mapped_column(ForeignKey('position.id', ondelete='CASCADE'), primary_key=True)
     department_id: Mapped[int] = mapped_column(ForeignKey('department.id', ondelete='CASCADE'), primary_key=True)

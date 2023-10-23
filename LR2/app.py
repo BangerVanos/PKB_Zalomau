@@ -3,8 +3,8 @@ import app.config as cf
 import streamlit as st
 
 
-engine = db.initialize_engine()
-db.initialize_tables(engine)
+# engine = db.initialize_engine()
+# db.initialize_tables(engine)
 st.set_page_config(page_title='О приложении', layout='wide')
 st.write('# Добро пожаловать!')
 st.write('Это небольшое приложение для управления базой данных некоторого предприятия. Сделано '
