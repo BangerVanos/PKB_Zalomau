@@ -8,4 +8,5 @@ def initialize_engine():
 
 
 def initialize_tables(engine):
+    Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
