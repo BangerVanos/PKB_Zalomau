@@ -91,7 +91,7 @@ class Position(Base):
 
 
 class DepPosAssociation(Base):
-    __tablename__ = 'department_position_association'
+    __tablename__ = 'gen'
 
     position_id: Mapped[int] = mapped_column(ForeignKey('position.id', ondelete='CASCADE'), primary_key=True)
     department_id: Mapped[int] = mapped_column(ForeignKey('department.id', ondelete='CASCADE'), primary_key=True)
@@ -137,7 +137,7 @@ class History(Base):
     __tablename__ = 'history'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    employee_name: Mapped[int | None] = mapped_column(ForeignKey('employee.id', ondelete='SET NULL'))
+    employee_name: Mapped[int | None] = mapped_column(String)
     department_id: Mapped[int | None] = mapped_column(ForeignKey('department.id', ondelete='SET NULL'))
     position_id: Mapped[int | None] = mapped_column(ForeignKey('position.id', ondelete='SET NULL'))
     category: Mapped[int | None] = mapped_column(SmallInteger)
