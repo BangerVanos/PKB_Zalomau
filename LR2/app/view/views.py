@@ -293,6 +293,7 @@ def lookup_history_page():
     with placeholder.container():
         for record in history_records:
             with st.container():
+                columns = st.columns(8)
                 with columns[0]:
                     st.write(record.employee_name)
                 with columns[1]:
