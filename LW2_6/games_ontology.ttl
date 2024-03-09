@@ -1,0 +1,172 @@
+@prefix : <http://www.semanticweb.org/user/ontologies/2024/2/games_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/user/ontologies/2024/2/games_ontology/> .
+
+<http://www.semanticweb.org/user/ontologies/2024/2/games_ontology> rdf:type owl:Ontology ;
+                                                                    rdfs:comment "This awesome ontology was created by \"Really Evil Lena\" for BSUIR \"Projecting of knowledge bases\" subject in 2024"@en ;
+                                                                    owl:versionInfo """Ver 0.0.1 of this awesome ontology.
+CHANGE LIST:
+1. Ontology was created""" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Android_program
+:Android_program rdf:type owl:Class ;
+                 rdfs:subClassOf :Mobile_program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Artificial_intelligence
+:Artificial_intelligence rdf:type owl:Class ;
+                         rdfs:subClassOf :Information_technology .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Behaviour_algorithms
+:Behaviour_algorithms rdf:type owl:Class ;
+                      rdfs:subClassOf :Gaming_AI .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#CNN
+:CNN rdf:type owl:Class ;
+     rdfs:subClassOf :Neural_network ;
+     owl:disjointWith :LSTM .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Desicion_Tree
+:Desicion_Tree rdf:type owl:Class ;
+               rdfs:subClassOf :Machine_learning ;
+               owl:disjointWith :Regression .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Desktop_program
+:Desktop_program rdf:type owl:Class ;
+                 rdfs:subClassOf :Program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Driver_program
+:Driver_program rdf:type owl:Class ;
+                rdfs:subClassOf :Program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Enterpise
+:Enterpise rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Entertainment_enterprise
+:Entertainment_enterprise rdf:type owl:Class ;
+                          rdfs:subClassOf :Enterpise .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Game
+:Game rdf:type owl:Class ;
+      rdfs:subClassOf :Program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Game_studio
+:Game_studio rdf:type owl:Class ;
+             rdfs:subClassOf :Entertainment_enterprise .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Gaming_AI
+:Gaming_AI rdf:type owl:Class ;
+           rdfs:subClassOf :Artificial_intelligence .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#IOS_program
+:IOS_program rdf:type owl:Class ;
+             rdfs:subClassOf :Mobile_program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Information_technology
+:Information_technology rdf:type owl:Class ;
+                        rdfs:subClassOf :Technology .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Information_technology_enterprise
+:Information_technology_enterprise rdf:type owl:Class ;
+                                   rdfs:subClassOf :Enterpise .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#LSTM
+:LSTM rdf:type owl:Class ;
+      rdfs:subClassOf :Neural_network .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Learning_program
+:Learning_program rdf:type owl:Class ;
+                  rdfs:subClassOf :Program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Linear_Regression
+:Linear_Regression rdf:type owl:Class ;
+                   rdfs:subClassOf :Regression ;
+                   owl:disjointWith :Logistic_Regression .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Logistic_Regression
+:Logistic_Regression rdf:type owl:Class ;
+                     rdfs:subClassOf :Regression .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Machine_learning
+:Machine_learning rdf:type owl:Class ;
+                  rdfs:subClassOf :Artificial_intelligence .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Mobile_program
+:Mobile_program rdf:type owl:Class ;
+                rdfs:subClassOf :Program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Neural_network
+:Neural_network rdf:type owl:Class ;
+                rdfs:subClassOf :Artificial_intelligence .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Operation_system
+:Operation_system rdf:type owl:Class ;
+                  rdfs:subClassOf :Program .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Pathfinding_algorithms
+:Pathfinding_algorithms rdf:type owl:Class ;
+                        rdfs:subClassOf :Gaming_AI .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Program
+:Program rdf:type owl:Class ;
+         rdfs:subClassOf :Information_technology .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Regression
+:Regression rdf:type owl:Class ;
+            rdfs:subClassOf :Machine_learning .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Technology
+:Technology rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/user/ontologies/2024/2/games_ontology#Utility_program
+:Utility_program rdf:type owl:Class ;
+                 rdfs:subClassOf :Program .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Gaming_AI
+                :Machine_learning
+                :Neural_network
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
