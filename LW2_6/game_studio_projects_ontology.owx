@@ -1,0 +1,812 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>An onotlogy about future projects of &quot;Purple Skull Games&quot;</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal>0.0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Battle_Mechanics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Console_Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Design_Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Desktop_Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Asset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Code"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Engine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Mechanics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game_Script"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gamedev_Tool_Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graphics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graphics_Style"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mobile_Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movement_Mechanics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project_Asset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project_Features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RPG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role-Playing_Game"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Setting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shooter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strategy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tool_Features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vehicle_Mechanic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3D_Graphics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#3D_Model"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#game_genre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_feature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#platform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#project_asset"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#development_start_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#last_version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#rating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#release_date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_RPG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Android"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drone_Strike"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drone_Strike_Design_Document"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FPS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#First_Person_Shooter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Flying_Vehicles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ground_Vehicles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hypercasual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IOS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Isometric"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Linux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low_Poly"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low_Poly_Graphics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low_Poly_Style"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Melee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Military"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PS5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pixel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pixel_Art"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PlayStation_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Post-Survivor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Post-apocalypse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Post_Survivor_Design_Document"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RTS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Real-Time_Strategy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Realistic_Graphics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Realistic_Style"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sandbox_RPG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shooting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TBS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TPS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Third_Person_Shooter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Turn-Based_Strategy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Windows"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Xbox_Series_S"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Xbox_Series_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2.5D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3D"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Game_Code"/>
+        <Class IRI="#Game_Script"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Model"/>
+        <Class IRI="#3D_Model"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RPG"/>
+        <Class IRI="#Role-Playing_Game"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Battle_Mechanics"/>
+        <Class IRI="#Game_Mechanics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Console_Platform"/>
+        <Class IRI="#Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Design_Document"/>
+        <Class IRI="#Game_Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Desktop_Platform"/>
+        <Class IRI="#Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Asset"/>
+        <Class IRI="#Project_Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Code"/>
+        <Class IRI="#Game_Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Engine"/>
+        <Class IRI="#Gamedev_Tool_Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Features"/>
+        <Class IRI="#Project_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Mechanics"/>
+        <Class IRI="#Game_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Project"/>
+        <Class IRI="#Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game_Script"/>
+        <Class IRI="#Game_Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gamedev_Tool_Project"/>
+        <Class IRI="#Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Graphics"/>
+        <Class IRI="#Game_Genre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Graphics_Style"/>
+        <Class IRI="#Game_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mobile_Platform"/>
+        <Class IRI="#Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <Class IRI="#Game_Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Movement_Mechanics"/>
+        <Class IRI="#Game_Mechanics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RPG"/>
+        <Class IRI="#Game_Genre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Role-Playing_Game"/>
+        <Class IRI="#Game_Genre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Setting"/>
+        <Class IRI="#Game_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shooter"/>
+        <Class IRI="#Game_Genre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strategy"/>
+        <Class IRI="#Game_Genre"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tool_Features"/>
+        <Class IRI="#Project_Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle_Mechanic"/>
+        <Class IRI="#Movement_Mechanics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3D_Graphics"/>
+        <Class IRI="#Gamedev_Tool_Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#3D_Model"/>
+        <Class IRI="#Game_Asset"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Role-Playing_Game"/>
+        <NamedIndividual IRI="#Action_RPG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mobile_Platform"/>
+        <NamedIndividual IRI="#Android"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game_Project"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Design_Document"/>
+        <NamedIndividual IRI="#Drone_Strike_Design_Document"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shooter"/>
+        <NamedIndividual IRI="#FPS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shooter"/>
+        <NamedIndividual IRI="#First_Person_Shooter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vehicle_Mechanic"/>
+        <NamedIndividual IRI="#Flying_Vehicles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vehicle_Mechanic"/>
+        <NamedIndividual IRI="#Ground_Vehicles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game_Genre"/>
+        <NamedIndividual IRI="#Hypercasual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mobile_Platform"/>
+        <NamedIndividual IRI="#IOS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics"/>
+        <NamedIndividual IRI="#Isometric"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Desktop_Platform"/>
+        <NamedIndividual IRI="#Linux"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Low_Poly"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Low_Poly_Graphics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Low_Poly_Style"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Battle_Mechanics"/>
+        <NamedIndividual IRI="#Melee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Setting"/>
+        <NamedIndividual IRI="#Military"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Console_Platform"/>
+        <NamedIndividual IRI="#PS5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Pixel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Pixel_Art"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Console_Platform"/>
+        <NamedIndividual IRI="#PlayStation_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game_Project"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Setting"/>
+        <NamedIndividual IRI="#Post-apocalypse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Design_Document"/>
+        <NamedIndividual IRI="#Post_Survivor_Design_Document"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Strategy"/>
+        <NamedIndividual IRI="#RTS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Strategy"/>
+        <NamedIndividual IRI="#Real-Time_Strategy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Realistic_Graphics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics_Style"/>
+        <NamedIndividual IRI="#Realistic_Style"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Role-Playing_Game"/>
+        <NamedIndividual IRI="#Sandbox_RPG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Battle_Mechanics"/>
+        <NamedIndividual IRI="#Shooting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Strategy"/>
+        <NamedIndividual IRI="#TBS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shooter"/>
+        <NamedIndividual IRI="#TPS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shooter"/>
+        <NamedIndividual IRI="#Third_Person_Shooter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Strategy"/>
+        <NamedIndividual IRI="#Turn-Based_Strategy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Desktop_Platform"/>
+        <NamedIndividual IRI="#Windows"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Console_Platform"/>
+        <NamedIndividual IRI="#Xbox_Series_S"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Console_Platform"/>
+        <NamedIndividual IRI="#Xbox_Series_X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics"/>
+        <NamedIndividual IRI="#2D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics"/>
+        <NamedIndividual IRI="#2.5D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Graphics"/>
+        <NamedIndividual IRI="#3D"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#FPS"/>
+        <NamedIndividual IRI="#First_Person_Shooter"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Isometric"/>
+        <NamedIndividual IRI="#2.5D"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Low_Poly"/>
+        <NamedIndividual IRI="#Low_Poly_Graphics"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Low_Poly"/>
+        <NamedIndividual IRI="#Low_Poly_Style"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Low_Poly_Graphics"/>
+        <NamedIndividual IRI="#Low_Poly_Style"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#PS5"/>
+        <NamedIndividual IRI="#PlayStation_5"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Pixel"/>
+        <NamedIndividual IRI="#Pixel_Art"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#RTS"/>
+        <NamedIndividual IRI="#Real-Time_Strategy"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Realistic_Graphics"/>
+        <NamedIndividual IRI="#Realistic_Style"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#TBS"/>
+        <NamedIndividual IRI="#Turn-Based_Strategy"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#TPS"/>
+        <NamedIndividual IRI="#Third_Person_Shooter"/>
+    </SameIndividual>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#game_genre"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Hypercasual"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#game_genre"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#TPS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#game_genre"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#3D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Flying_Vehicles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Low_Poly"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Military"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Shooting"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#platform"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Android"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#project_asset"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <NamedIndividual IRI="#Drone_Strike_Design_Document"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#game_genre"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#FPS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#game_genre"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Sandbox_RPG"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#game_genre"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#3D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Flying_Vehicles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Ground_Vehicles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Low_Poly"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Post-apocalypse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_feature"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Shooting"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#platform"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Windows"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#project_asset"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <NamedIndividual IRI="#Post_Survivor_Design_Document"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#development_start_date"/>
+        <NamedIndividual IRI="#Drone_Strike"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-15T12:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_version"/>
+        <NamedIndividual IRI="#IOS"/>
+        <Literal>17.4.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#development_start_date"/>
+        <NamedIndividual IRI="#Post-Survivor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-05T12:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_version"/>
+        <NamedIndividual IRI="#Windows"/>
+        <Literal>11</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#game_genre"/>
+        <Class IRI="#Game_Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_feature"/>
+        <Class IRI="#Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#platform"/>
+        <Class IRI="#Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#project_asset"/>
+        <Class IRI="#Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#game_genre"/>
+        <Class IRI="#Game_Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_feature"/>
+        <Class IRI="#Project_Features"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#platform"/>
+        <Class IRI="#Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#project_asset"/>
+        <Class IRI="#Project_Asset"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#development_start_date"/>
+        <Class IRI="#Project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_version"/>
+        <Class IRI="#Platform"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_version"/>
+        <Class IRI="#Project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_version"/>
+        <Class IRI="#Project_Asset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#rating"/>
+        <Class IRI="#Project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#release_date"/>
+        <Class IRI="#Project"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#development_start_date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#last_version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#rating"/>
+        <Datatype abbreviatedIRI="owl:rational"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#release_date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Game_Project</IRI>
+        <Literal>Realate all game projects here</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gamedev_Tool_Project</IRI>
+        <Literal>Relate all projects which are gamedev tools but have no specific type here</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Platform</IRI>
+        <Literal>Project platform (desktop, mobile, console, etc).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Project</IRI>
+        <Literal>Main class for project. Relate project to this class if you do not know its specific type. Otherwise, choose something like Gamedev_Tool_Project or Game_Project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Role-Playing_Game</IRI>
+        <Literal>A role-playing game (sometimes spelled roleplaying game, or abbreviated as RPG) is a game in which players assume the roles of characters in a fictional setting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shooter</IRI>
+        <Literal>Shooter video games or shooters are a subgenre of action video games where the focus is almost entirely on the defeat of the character&apos;s enemies using the weapons given to the player.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:topDataProperty</AbbreviatedIRI>
+        <Literal>Property which shows game genre. First domain is Game_Project object. Second domain is Genre object</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

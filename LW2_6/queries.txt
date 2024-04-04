@@ -1,0 +1,55 @@
+# Select objects and their types
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX GameOnt: <http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology#>
+SELECT ?Subject ?Object WHERE {
+	?Subject rdf:type ?Object.
+}
+
+ORDER BY ?Subject
+
+# Select objects and their types
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX GameOnt: <http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology#>
+SELECT ?Subject WHERE {
+	?Subject a GameOnt:Game_Project.
+}
+ORDER BY ?Subject
+
+# Select Console Platforms
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX GameOnt: <http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology#>
+SELECT ?Platform WHERE {
+	?Platform a GameOnt:Console_Platform.
+}
+
+ORDER BY ?Platform
+
+
+# Select games and their features
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX GameOnt: <http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology#>
+SELECT ?Game ?Feature WHERE {
+	?Game GameOnt:has_feature ?Feature.
+}
+
+ORDER BY ?Game
+
+
+# Select games that have shooting feature
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX GameOnt: <http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology#>
+SELECT ?Game ?Feature WHERE {
+	?Game GameOnt:has_feature ?Feature.
+}
+FILTER (?Feature = GameOnt: Shooting).
+ORDER BY ?Game
+

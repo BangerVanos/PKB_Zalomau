@@ -1,0 +1,2323 @@
+Prefix(:=<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://www.semanticweb.org/porta/ontologies/2022/5/VideOWL#terms:>)
+
+
+Ontology(<http://www.semanticweb.org/porta/ontologies/2022/5/VideOWL>
+Annotation(<http://purl.org/dc/elements/1.1/creator> "http://delicias.dia.fi.upm.es/members/DGarijo/#me"^^xsd:anyURI)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "http://filip.milstan.net/"^^xsd:anyURI)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "http://purl.org/net/mpoveda"^^xsd:anyURI)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "http://www.mendeley.com/profiles/janne-parkkila/"^^xsd:anyURI)
+Annotation(<http://purl.org/dc/elements/1.1/description> "The Video Game Ontology is an ontology designed for describing video games and all the resources related to their game plays."@en)
+Annotation(<http://purl.org/dc/elements/1.1/title> "The Video Game Ontology"@en)
+Annotation(<http://purl.org/dc/terms/created> "2013-10-22"^^xsd:date)
+Annotation(<http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/")
+Annotation(<http://purl.org/dc/terms/modified> "2014-12-19"^^xsd:date)
+Annotation(<http://purl.org/vocab/vann/preferredNamespacePrefix> "vgo")
+Annotation(<http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/VideoGameOntology#")
+Annotation(terms:created "Marianna Nicolosi-Asmundo")
+Annotation(terms:created "Simone De Martino")
+Annotation(terms:created "Stefano Angelo Rizzo")
+Annotation(rdfs:comment "An ontology for describing video games and game plays. Created by Janne Parkkila, Filip Radulovic, Daniel Garijo and María Poveda."@en)
+Annotation(owl:versionInfo "1.0")
+Annotation(owl:versionInfo "1.0"^^xsd:decimal)
+
+Declaration(Class(<http://dbpedia.org/ontology/PopulatedPlace>))
+Declaration(Class(<http://purl.org/goodrelations/v1#ProductOrService>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Achievement>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Character>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Collection>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Completion>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Curiosity>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Fandom>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Feature>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#GainEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Game>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#GameEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#GameProduct>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Genre>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#HardMode>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#InAppPurchaseEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#InstantaneousEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Item>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Leaderboard>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#LoseEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Loyalty>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Luck>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#MenuEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Minigame>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Multiplayer>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Paragon>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Player>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#PlayerEvent>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#PlayingArea>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Session>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#SpecialPlayStyle>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Tutorial>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Veteran>))
+Declaration(Class(<http://purl.org/net/VideoGameOntology#Virtuosity>))
+Declaration(Class(<http://schema.org/Product>))
+Declaration(Class(:Action))
+Declaration(Class(:ActionRPG))
+Declaration(Class(:Adventure))
+Declaration(Class(:Agent))
+Declaration(Class(:Art))
+Declaration(Class(:Artistic))
+Declaration(Class(:Character))
+Declaration(Class(:Choice))
+Declaration(Class(:Collection))
+Declaration(Class(:Combat))
+Declaration(Class(:Context))
+Declaration(Class(:ContextualInteraction))
+Declaration(Class(:DatingSim))
+Declaration(Class(:Developer))
+Declaration(Class(:DrivingSim))
+Declaration(Class(:DynamicAdventure))
+Declaration(Class(:Educational))
+Declaration(Class(:Educative))
+Declaration(Class(:Emergent))
+Declaration(Class(:Evocative))
+Declaration(Class(:Exclusive))
+Declaration(Class(:Exploration))
+Declaration(Class(:Explorative))
+Declaration(Class(:FPS))
+Declaration(Class(:FPSFantasy))
+Declaration(Class(:FPSRealistic))
+Declaration(Class(:Familiar))
+Declaration(Class(:FamiliarExploration))
+Declaration(Class(:Fantasy))
+Declaration(Class(:FantasyExploration))
+Declaration(Class(:Fictional))
+Declaration(Class(:Fighting))
+Declaration(Class(:FirstPerson))
+Declaration(Class(:Framed))
+Declaration(Class(:Free))
+Declaration(Class(:Game))
+Declaration(Class(:Gameplay))
+Declaration(Class(:Genre))
+Declaration(Class(:Gore))
+Declaration(Class(:Grotesque))
+Declaration(Class(:Horror))
+Declaration(Class(:InteractiveMovie))
+Declaration(Class(:Inventory))
+Declaration(Class(:Isometric))
+Declaration(Class(:JobSim))
+Declaration(Class(:Lore))
+Declaration(Class(:Malee))
+Declaration(Class(:Management))
+Declaration(Class(:Match))
+Declaration(Class(:Mechanic))
+Declaration(Class(:Metroidvania))
+Declaration(Class(:Minigames))
+Declaration(Class(:Movement))
+Declaration(Class(:Multiplatform))
+Declaration(Class(:Multiplayer))
+Declaration(Class(:MultiplayerAvailable))
+Declaration(Class(:NPC))
+Declaration(Class(:Narrative))
+Declaration(Class(:NonRPG))
+Declaration(Class(:OpenWorld))
+Declaration(Class(:Other))
+Declaration(Class(:POV))
+Declaration(Class(:Party))
+Declaration(Class(:PersonStandpoint))
+Declaration(Class(:Platform))
+Declaration(Class(:Platformer))
+Declaration(Class(:Playable))
+Declaration(Class(:PointAndClick))
+Declaration(Class(:Pseudonym))
+Declaration(Class(:Psychological))
+Declaration(Class(:Puzzle))
+Declaration(Class(:PuzzleGame))
+Declaration(Class(:QTE))
+Declaration(Class(:RPG))
+Declaration(Class(:Real))
+Declaration(Class(:Realistic))
+Declaration(Class(:Roguelike))
+Declaration(Class(:SandBox))
+Declaration(Class(:Scrolling))
+Declaration(Class(:Shooter))
+Declaration(Class(:Shooting))
+Declaration(Class(:Simple))
+Declaration(Class(:Simulation))
+Declaration(Class(:Simulator))
+Declaration(Class(:Single))
+Declaration(Class(:SoftwareHouse))
+Declaration(Class(:Sport))
+Declaration(Class(:Sportive))
+Declaration(Class(:Stealth))
+Declaration(Class(:Strategic))
+Declaration(Class(:Strategy))
+Declaration(Class(:Survival))
+Declaration(Class(:SurvivalHorror))
+Declaration(Class(:TPS))
+Declaration(Class(:TPSFantasy))
+Declaration(Class(:TPSRealistic))
+Declaration(Class(:Tactic))
+Declaration(Class(:Textual))
+Declaration(Class(:ThirdPerson))
+Declaration(Class(:VisualNovel))
+Declaration(Class(owl:Thing))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/creator>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasAchievement>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasCharacter>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasFeature>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasGameGenre>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasItem>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasLeaderboard>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#hasPlayingArea>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#involvesAchievement>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#involvesCharacter>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#involvesPlayer>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isAchievedInSession>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isAchievementInGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isCharacterInGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isCharacterInSession>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isEventAssociatedToPlayer>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isEventInGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isEventInSession>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isEventRelatedToItem>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isEventTriggeredByCharacter>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isFriendWithPlayer>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isItemInGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isLeaderboardInGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isPlayerInSession>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#isSessionInGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#livesIn>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#ownsAchievement>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#ownsCharacter>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#ownsItem>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#playsGame>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#purchasesGameOffering>))
+Declaration(ObjectProperty(<http://purl.org/net/VideoGameOntology#unlocksAchievement>))
+Declaration(ObjectProperty(:NPCOf))
+Declaration(ObjectProperty(:POVOf))
+Declaration(ObjectProperty(:antagonistOf))
+Declaration(ObjectProperty(:characterOf))
+Declaration(ObjectProperty(:colleagueOf))
+Declaration(ObjectProperty(:compatibleWith))
+Declaration(ObjectProperty(:contextOf))
+Declaration(ObjectProperty(:deuteragonistOf))
+Declaration(ObjectProperty(:developedBy))
+Declaration(ObjectProperty(:developerOf))
+Declaration(ObjectProperty(:employedBy))
+Declaration(ObjectProperty(:employeeOf))
+Declaration(ObjectProperty(:featureOf))
+Declaration(ObjectProperty(:gameplayOf))
+Declaration(ObjectProperty(:hasContext))
+Declaration(ObjectProperty(:hasFeature))
+Declaration(ObjectProperty(:hasGameplay))
+Declaration(ObjectProperty(:hasMechanic))
+Declaration(ObjectProperty(:hasNarrative))
+Declaration(ObjectProperty(:hasPOV))
+Declaration(ObjectProperty(:hires))
+Declaration(ObjectProperty(:includes))
+Declaration(ObjectProperty(:mechanicOf))
+Declaration(ObjectProperty(:narrationOf))
+Declaration(ObjectProperty(:partOf))
+Declaration(ObjectProperty(:platformOf))
+Declaration(ObjectProperty(:playableOf))
+Declaration(ObjectProperty(:prequelOf))
+Declaration(ObjectProperty(:protagonistOf))
+Declaration(ObjectProperty(:secondaryOf))
+Declaration(ObjectProperty(:sequelOf))
+Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/knows>))
+Declaration(DataProperty(<http://purl.org/net/VideoGameOntology#endTime>))
+Declaration(DataProperty(<http://purl.org/net/VideoGameOntology#eventName>))
+Declaration(DataProperty(<http://purl.org/net/VideoGameOntology#eventTime>))
+Declaration(DataProperty(<http://purl.org/net/VideoGameOntology#releaseDate>))
+Declaration(DataProperty(<http://purl.org/net/VideoGameOntology#startTime>))
+Declaration(DataProperty(<http://purl.org/net/VideoGameOntology#username>))
+Declaration(DataProperty(:hasReleaseDate))
+Declaration(DataProperty(:income))
+Declaration(DataProperty(:indie))
+Declaration(NamedIndividual(:AC))
+Declaration(NamedIndividual(:ASCII))
+Declaration(NamedIndividual(:Activision))
+Declaration(NamedIndividual(:Android))
+Declaration(NamedIndividual(:Apple))
+Declaration(NamedIndividual(:BANDAI_NAMCO))
+Declaration(NamedIndividual(:BIG_BRAIN_ACADEMY))
+Declaration(NamedIndividual(:BINDING_OF_ISAAC))
+Declaration(NamedIndividual(:BioWare))
+Declaration(NamedIndividual(:CALL_OF_DUTY))
+Declaration(NamedIndividual(:CAPCOM))
+Declaration(NamedIndividual(:Clickbased))
+Declaration(NamedIndividual(:Co-op))
+Declaration(NamedIndividual(:EPIC_GAMES))
+Declaration(NamedIndividual(:Edmund_McMillen))
+Declaration(NamedIndividual(:Electronic_Arts))
+Declaration(NamedIndividual(:FABLE))
+Declaration(NamedIndividual(:FIFA_2022))
+Declaration(NamedIndividual(:FORTNITE))
+Declaration(NamedIndividual(:General_Sheperd))
+Declaration(NamedIndividual(:Infinity_Ward))
+Declaration(NamedIndividual(:Item_description_based))
+Declaration(NamedIndividual(:Lionehead_studios))
+Declaration(NamedIndividual(:MASS_EFFECT_III))
+Declaration(NamedIndividual(:MINECRAFT))
+Declaration(NamedIndividual(:MONUMENT_VALLEY_II))
+Declaration(NamedIndividual(:Markus_Perrson))
+Declaration(NamedIndividual(:Mojang))
+Declaration(NamedIndividual(:Nintendo))
+Declaration(NamedIndividual(:Nintendo_Ds))
+Declaration(NamedIndividual(:Notch))
+Declaration(NamedIndividual(:OUTLAST))
+Declaration(NamedIndividual(:OpenWorld))
+Declaration(NamedIndividual(:Open_map))
+Declaration(NamedIndividual(:PS3))
+Declaration(NamedIndividual(:PS4))
+Declaration(NamedIndividual(:PS5))
+Declaration(NamedIndividual(:PVE))
+Declaration(NamedIndividual(:PVP))
+Declaration(NamedIndividual(:Party))
+Declaration(NamedIndividual(:Pc_gaming))
+Declaration(NamedIndividual(:Price))
+Declaration(NamedIndividual(:QTE))
+Declaration(NamedIndividual(:RE))
+Declaration(NamedIndividual(:RESIDENT_EVIL))
+Declaration(NamedIndividual(:RESIDENT_EVIL_0))
+Declaration(NamedIndividual(:RESIDENT_EVIL_2))
+Declaration(NamedIndividual(:RESIDENT_EVIL_3))
+Declaration(NamedIndividual(:RESIDENT_EVIL_4))
+Declaration(NamedIndividual(:RESIDENT_EVIL_5))
+Declaration(NamedIndividual(:RESIDENT_EVIL_6))
+Declaration(NamedIndividual(:RESIDENT_EVIL_7))
+Declaration(NamedIndividual(:Red_Barrels))
+Declaration(NamedIndividual(:SKY_RACOON))
+Declaration(NamedIndividual(:Simon_Ghost))
+Declaration(NamedIndividual(:Soap))
+Declaration(NamedIndividual(:Supermassive_Games))
+Declaration(NamedIndividual(:Switch))
+Declaration(NamedIndividual(:TEKKEN_7))
+Declaration(NamedIndividual(:UBISOFT))
+Declaration(NamedIndividual(:UNTIL_DOWN))
+Declaration(NamedIndividual(:Utswo_games))
+Declaration(NamedIndividual(:XBOX-series_S))
+Declaration(NamedIndividual(:XBOX-series_X))
+Declaration(NamedIndividual(:XBOX_360))
+Declaration(NamedIndividual(:XBOX_ONE))
+Declaration(NamedIndividual(:acquisition))
+Declaration(NamedIndividual(:agonistic))
+Declaration(NamedIndividual(:character_development))
+Declaration(NamedIndividual(:context_based))
+Declaration(NamedIndividual(:corpo_a_corpo))
+Declaration(NamedIndividual(:corruption))
+Declaration(NamedIndividual(:creation_based))
+Declaration(NamedIndividual(:creative_freedom))
+Declaration(NamedIndividual(:dungeon_exploration))
+Declaration(NamedIndividual(:embedded_choice))
+Declaration(NamedIndividual(:emergent))
+Declaration(NamedIndividual(:escape))
+Declaration(NamedIndividual(:evocation))
+Declaration(NamedIndividual(:exploration_based))
+Declaration(NamedIndividual(:exploration_narrative_tracks))
+Declaration(NamedIndividual(:framed))
+Declaration(NamedIndividual(:free_interaction))
+Declaration(NamedIndividual(:free_roaming))
+Declaration(NamedIndividual(:free_shooting))
+Declaration(NamedIndividual(:hidden))
+Declaration(NamedIndividual(:highlight))
+Declaration(NamedIndividual(:historical))
+Declaration(NamedIndividual(:homely))
+Declaration(NamedIndividual(:horror))
+Declaration(NamedIndividual(:job_based))
+Declaration(NamedIndividual(:learning))
+Declaration(NamedIndividual(:looting_based))
+Declaration(NamedIndividual(:math))
+Declaration(NamedIndividual(:minigame))
+Declaration(NamedIndividual(:mithical))
+Declaration(NamedIndividual(:monster_invasion))
+Declaration(NamedIndividual(:multiple_choice))
+Declaration(NamedIndividual(:painting))
+Declaration(NamedIndividual(:paranormal))
+Declaration(NamedIndividual(:permanent_death))
+Declaration(NamedIndividual(:post_apocaliptic))
+Declaration(NamedIndividual(:prompted_interaction))
+Declaration(NamedIndividual(:psychological))
+Declaration(NamedIndividual(:real_time))
+Declaration(NamedIndividual(:real_time_strategy))
+Declaration(NamedIndividual(:romance_based))
+Declaration(NamedIndividual(:side_scrolling))
+Declaration(NamedIndividual(:simple))
+Declaration(NamedIndividual(:single))
+Declaration(NamedIndividual(:space_wars))
+Declaration(NamedIndividual(:standard_PC))
+Declaration(NamedIndividual(:standard_isometrics))
+Declaration(NamedIndividual(:standard_platform))
+Declaration(NamedIndividual(:standard_stealth))
+Declaration(NamedIndividual(:standard_textual))
+Declaration(NamedIndividual(:standard_time_based))
+Declaration(NamedIndividual(:survivalhorror))
+Declaration(NamedIndividual(:thehangedman))
+Declaration(NamedIndividual(:turn_based))
+Declaration(NamedIndividual(:unlockable))
+Declaration(NamedIndividual(:urban))
+Declaration(NamedIndividual(:value_based))
+Declaration(NamedIndividual(:vehicle_based))
+Declaration(NamedIndividual(:walltext))
+Declaration(NamedIndividual(:war))
+Declaration(NamedIndividual(:with_matches))
+Declaration(NamedIndividual(:with_teams))
+Declaration(NamedIndividual(:zombies_invasion))
+Declaration(NamedIndividual(<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/created>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/modified>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespacePrefix>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
+Declaration(AnnotationProperty(terms:created))
+Declaration(Datatype(xsd:date))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.org/dc/terms/creator> (<http://purl.org/dc/terms/creator>)
+
+ObjectPropertyDomain(<http://purl.org/dc/terms/creator> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/dc/terms/creator> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasAchievement> (has achievement)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasAchievement> "The vgo:hasAchievement property specifies that a game has a specific achievement. A game often contains more than one achievement that can be awarded to the players."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasAchievement> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasAchievement> "has achievement"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#hasAchievement> <http://purl.org/net/VideoGameOntology#isAchievementInGame>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasAchievement> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasAchievement> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasCharacter> (has character)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasCharacter> "The vgo:hasCharacter property specifies that a game has a specific character. A game can have more than one characters involved."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasCharacter> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasCharacter> "has character"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#hasCharacter> <http://purl.org/net/VideoGameOntology#isCharacterInGame>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasCharacter> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasCharacter> <http://purl.org/net/VideoGameOntology#Character>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasFeature> (has feature)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasFeature> "The vgo:hasFeature property indicates what is a vgo:Feature (or ability) of a particular vgo:Item. For example, a fire sword, a healing staff or boots of flight connects item to a feature it can have. An item with connection to potable feature would make the item potable."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasFeature> "has feature"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasFeature> <http://purl.org/net/VideoGameOntology#Item>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasFeature> <http://purl.org/net/VideoGameOntology#Feature>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasGameGenre> (has game genre)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasGameGenre> "The vgo:hasGameGenre property specifies that a game belongs to a certain game genre. For example, Pong would be an arcade game and Mario a platformer."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasGameGenre> "has game genre"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasGameGenre> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasGameGenre> <http://purl.org/net/VideoGameOntology#Genre>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasItem> (has item)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasItem> "The vgo:hasItem property specifies that a game has a specific item. A game often contains more than one items."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasItem> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasItem> "has item"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#hasItem> <http://purl.org/net/VideoGameOntology#isItemInGame>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasItem> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasItem> <http://purl.org/net/VideoGameOntology#Item>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasLeaderboard> (has leaderboard)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasLeaderboard> "The vgo:hasLeaderboard specifies that a leaderboard belongs to a particular game. A game can have one or more leaderboards that keep track of ranking of the players. For example a leaderboard could be ranking of who has the most soccer game victories or who has the fastest lap in a Formula 1 game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasLeaderboard> "has leaderboard"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#hasLeaderboard> <http://purl.org/net/VideoGameOntology#isLeaderboardInGame>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasLeaderboard> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasLeaderboard> <http://purl.org/net/VideoGameOntology#Leaderboard>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#hasPlayingArea> (has playing area)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#hasPlayingArea> "The vgo:hasPlayingArea property asserts a gaming area to a specific game. In every game, the gameplay takes place in some playing area."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#hasPlayingArea> "has playing area"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#hasPlayingArea> <http://purl.org/net/VideoGameOntology#Game>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#hasPlayingArea> <http://purl.org/net/VideoGameOntology#PlayingArea>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#involvesAchievement> (involves achievement)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#involvesAchievement> "The vgo:involvesPlayer property specifies that a session involves a specific player. A session may involve more than one player."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#involvesAchievement> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#involvesAchievement> "involves achievement"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#involvesAchievement> <http://purl.org/net/VideoGameOntology#isAchievedInSession>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#involvesAchievement> <http://purl.org/net/VideoGameOntology#Session>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#involvesAchievement> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#involvesCharacter> (involves character)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#involvesCharacter> "The vgo:involvesCharacter property specifies that a session involves a specific character."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#involvesCharacter> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#involvesCharacter> "involves character"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#involvesCharacter> <http://purl.org/net/VideoGameOntology#isCharacterInSession>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#involvesCharacter> <http://purl.org/net/VideoGameOntology#Session>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#involvesCharacter> <http://purl.org/net/VideoGameOntology#Character>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#involvesPlayer> (involves player)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#involvesPlayer> "The vgo:involvesPlayer property specifies that a session involves a specific player. A session may involve more than one player."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#involvesPlayer> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#involvesPlayer> "involves player"@en)
+InverseObjectProperties(<http://purl.org/net/VideoGameOntology#involvesPlayer> <http://purl.org/net/VideoGameOntology#isPlayerInSession>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#involvesPlayer> <http://purl.org/net/VideoGameOntology#Session>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#involvesPlayer> <http://purl.org/net/VideoGameOntology#Player>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isAchievedInSession> (is achieved in session)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isAchievedInSession> "The property vgo:isAchievedInSession asserts the receiving of an achievement to a certain gameplay session. This enables to keep track of what achievements a player has gained during one gameplay session."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isAchievedInSession> "is achieved in session"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isAchievedInSession> <http://purl.org/net/VideoGameOntology#Achievement>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isAchievedInSession> <http://purl.org/net/VideoGameOntology#Session>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isAchievementInGame> (is achievement in game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isAchievementInGame> "The property vgo:isAchievementInGame asserts that a specific vgo:Achievement can be earned in a particular vgo:Game. An achievement must belong to a certain game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isAchievementInGame> "is achievement in game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isAchievementInGame> <http://purl.org/net/VideoGameOntology#Achievement>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isAchievementInGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isCharacterInGame> (is character in game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isCharacterInGame> "vgo:isCharacterInGame property describes the relation between a vgo:Character and a vgo:Game. a vgo:Character always belongs to a certain game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isCharacterInGame> "is character in game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isCharacterInGame> <http://purl.org/net/VideoGameOntology#Character>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isCharacterInGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isCharacterInSession> (is character in session)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isCharacterInSession> "The vgo:isCharacterInSession property connects the vgo:Character to a vgo:Session. A character participates in a game session (e.g., a football match or a counter strike round) during a period of time. As players can have multiple characters, a character needs to be connected to the session, in order to know which of those characters participated in the certain session."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isCharacterInSession> "is character in session"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isCharacterInSession> <http://purl.org/net/VideoGameOntology#Character>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isCharacterInSession> <http://purl.org/net/VideoGameOntology#Session>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isEventAssociatedToPlayer> (is event associated to player)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isEventAssociatedToPlayer> "The vgo:isEventAssociatedToPlayer property asserts an event to a specific vgo:Player. A player may have caused an event to happen through the actions of his/her character and this property is used to connect the real person to the event."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isEventAssociatedToPlayer> "is event associated to player"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isEventAssociatedToPlayer> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isEventAssociatedToPlayer> <http://purl.org/net/VideoGameOntology#Player>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isEventInGame> (is event in game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isEventInGame> "The vgo:isEventInGame property asserts an event to a specific game. An event always happens inside a specific a game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isEventInGame> "is event in game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isEventInGame> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isEventInGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isEventInSession> (is event in session)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isEventInSession> "The vgo:isEventInSession property links an event to a specific gameplay session. An event always happens during a certain session and this property enables to link the events to that session. For example, an event of moving the queen in game of chess should be connected to a session of chess."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isEventInSession> "is event in session"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isEventInSession> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isEventInSession> <http://purl.org/net/VideoGameOntology#Session>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isEventRelatedToItem> (is event related to item)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isEventRelatedToItem> "The vgo:isEventRelatedToItem property asserts an event to a specific item. This property is used to describe an event that includes an item in one way or another. For example, an event where character gains a new sword can be described with this relation."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isEventRelatedToItem> "is event related to item"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isEventRelatedToItem> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isEventRelatedToItem> <http://purl.org/net/VideoGameOntology#Item>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isEventTriggeredByCharacter> (is event triggered by character)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isEventTriggeredByCharacter> "The vgo:isEventTriggeredByCharacter connects the vgo:InstantaneousEvent to specific vgo:Character. This describes that an event is often caused by a character. The character in question can be either a character controlled by a player or a computer. For example, both player and non-player characters can trigger a character death event."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isEventTriggeredByCharacter> "is event triggered by character"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isEventTriggeredByCharacter> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isEventTriggeredByCharacter> <http://purl.org/net/VideoGameOntology#Character>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isFriendWithPlayer> (is friend with player)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isFriendWithPlayer> "The vgo:isFriendWithPlayer describes a connection between players. The property is used to model the friends a player has and with whom he might be playing games with. The friends of a player are not bound necessarily to particular game, but can be describe the friendly playing relationship in overall."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isFriendWithPlayer> "is friend with player"@en)
+SubObjectPropertyOf(<http://purl.org/net/VideoGameOntology#isFriendWithPlayer> <http://xmlns.com/foaf/0.1/knows>)
+SymmetricObjectProperty(<http://purl.org/net/VideoGameOntology#isFriendWithPlayer>)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isFriendWithPlayer> <http://purl.org/net/VideoGameOntology#Player>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isFriendWithPlayer> <http://purl.org/net/VideoGameOntology#Player>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isItemInGame> (is item in game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isItemInGame> "The vgo:isItemInGame is used to specify which item belongs to a particular game. An item cannot exist alone and thus should always be associated to a certain game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isItemInGame> "is item in game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isItemInGame> <http://purl.org/net/VideoGameOntology#Item>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isItemInGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isLeaderboardInGame> (is leaderboard in game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isLeaderboardInGame> "The vgo:isLeaderboardInGame property specifies that a leaderboard is from a specific game."@en)
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isLeaderboardInGame> "optional"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isLeaderboardInGame> "is leaderboard in game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isLeaderboardInGame> <http://purl.org/net/VideoGameOntology#Leaderboard>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isLeaderboardInGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isPlayerInSession> (is player in session)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isPlayerInSession> "The vgo:isPlayerInSession property connects vgo:Player to a specific vgo:Session. This property is used to keep track of the gameplay sessions the player has played and what has happened in those sessions. For example vgo:Player may have participated in a this can be a one round of Counter-Strike or played one hour session of mario."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isPlayerInSession> "is player in session"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isPlayerInSession> <http://purl.org/net/VideoGameOntology#Player>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isPlayerInSession> <http://purl.org/net/VideoGameOntology#Session>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#isSessionInGame> (is session in game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#isSessionInGame> "The vgo:isSessionInGame property links a vgo:Session to a certain vgo:Game. Each gameplay session must belong to a certain game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#isSessionInGame> "is session in game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#isSessionInGame> <http://purl.org/net/VideoGameOntology#Session>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#isSessionInGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#livesIn> (lives in)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#livesIn> "The vgo:livesIn describes the connection between a player and his place of existence in the real-world. A vgo:Player is connected to wgs84:SpatialThing as that has descriptions for places where people live and contains more detailed information of them, such as continents and regions."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#livesIn> "lives in"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#livesIn> <http://purl.org/net/VideoGameOntology#Player>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#livesIn> <http://dbpedia.org/ontology/PopulatedPlace>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#ownsAchievement> (owns achievement)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#ownsAchievement> "The vgo:ownsAchievement links the vgo:Player to the particular vgo:Achievement earned in a game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#ownsAchievement> "owns achievement"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#ownsAchievement> <http://purl.org/net/VideoGameOntology#Player>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#ownsAchievement> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#ownsCharacter> (owns character)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#ownsCharacter> "The vgo:ownsCharacter property asserts which characters are owned by a specific player. A player can have multiple characters in one game and this connection is used to define all the different characters a player could be playing. Even though a player deletes, trades or loses his/her character in any way, the connection can be kept to contain the player’s history of owned characters."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#ownsCharacter> "owns character"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#ownsCharacter> <http://purl.org/net/VideoGameOntology#Player>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#ownsCharacter> <http://purl.org/net/VideoGameOntology#Character>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#ownsItem> (owns item)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#ownsItem> "The vgo:ownsItem describes ownership of an item. A vgo:Item is always owned by a certain vgo:Character. A vgo:Character can own multiple vgo:Items and this relationship is used to keep track of the character’s owned items. Even though players may lose items, the vgo:ownsItem connection is still held with the item. This approach allows to keep track of character’s history of owned items."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#ownsItem> "owns item"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#ownsItem> <http://purl.org/net/VideoGameOntology#Character>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#ownsItem> <http://purl.org/net/VideoGameOntology#Item>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#playsGame> (plays game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#playsGame> "the vgo:playsGame property asserts which games has the vgo:Player played at any point of time."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#playsGame> "plays game"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#playsGame> <http://purl.org/net/VideoGameOntology#Player>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#playsGame> <http://purl.org/net/VideoGameOntology#Game>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#purchasesGameOffering> (purchases game offering)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#purchasesGameOffering> "The vgo:purchasesGameOffering property aseerts a vgo:InAppPurchaseEvent to a specific vgo:GameProduct. This property describes what is purchased by the in-app purchase event that the player has done."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#purchasesGameOffering> "purchases game offering"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#purchasesGameOffering> <http://purl.org/net/VideoGameOntology#InAppPurchaseEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#purchasesGameOffering> <http://purl.org/net/VideoGameOntology#GameProduct>)
+
+# Object Property: <http://purl.org/net/VideoGameOntology#unlocksAchievement> (unlocks achievement)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#unlocksAchievement> "The vgo:unlocksAchievement property asserts an event to a certain achievement. An achievement is always unlocked as a consequence of some event. For example, eating the 100th piece of cake unlocks the “Cake Eater” achievement."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#unlocksAchievement> "unlocks achievement"@en)
+ObjectPropertyDomain(<http://purl.org/net/VideoGameOntology#unlocksAchievement> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+ObjectPropertyRange(<http://purl.org/net/VideoGameOntology#unlocksAchievement> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Object Property: :NPCOf (:NPCOf)
+
+AnnotationAssertion(rdfs:comment :NPCOf "Non-playing character of a game"@en)
+AnnotationAssertion(rdfs:comment :NPCOf "personaggio non giocabile nel videogame"@ita)
+SubObjectPropertyOf(:NPCOf :characterOf)
+
+# Object Property: :POVOf (:POVOf)
+
+AnnotationAssertion(rdfs:comment :POVOf "Perspective employed to visualize the game"@en)
+AnnotationAssertion(rdfs:comment :POVOf "prospettiva impiegata per visualizzare il gioco"@ita)
+SubObjectPropertyOf(:POVOf :featureOf)
+InverseObjectProperties(:POVOf :hasPOV)
+
+# Object Property: :antagonistOf (:antagonistOf)
+
+AnnotationAssertion(rdfs:comment :antagonistOf "Antagonists and enemies"@en)
+AnnotationAssertion(rdfs:comment :antagonistOf "antagonisti e nemici"@ita)
+SubObjectPropertyOf(:antagonistOf :NPCOf)
+
+# Object Property: :characterOf (:characterOf)
+
+AnnotationAssertion(rdfs:comment :characterOf "property used to define the fictitious characters (therefore, not the real living developers) of a game"@en)
+AnnotationAssertion(rdfs:comment :characterOf "proprietà che serve a definire i personaggi fittizi (quindi, non gli sviluppatori realmente viventi) di un gioco"@ita)
+
+# Object Property: :colleagueOf (:colleagueOf)
+
+AnnotationAssertion(rdfs:comment :colleagueOf "Symmetric property that manages the working relationships between various developers of the same title"@en)
+AnnotationAssertion(rdfs:comment :colleagueOf "proprietà simmetrica che gestisce i rapporti di collaborazione lavorativa tra vari sviluppatori di un titolo"@ita)
+SymmetricObjectProperty(:colleagueOf)
+ObjectPropertyDomain(:colleagueOf :Single)
+ObjectPropertyRange(:colleagueOf :Single)
+
+# Object Property: :compatibleWith (:compatibleWith)
+
+AnnotationAssertion(rdfs:comment :compatibleWith "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :compatibleWith "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:compatibleWith :hasFeature)
+InverseObjectProperties(:compatibleWith :platformOf)
+ObjectPropertyDomain(:compatibleWith :Game)
+ObjectPropertyRange(:compatibleWith :Platform)
+
+# Object Property: :contextOf (:contextOf)
+
+AnnotationAssertion(rdfs:comment :contextOf "Specific context applied to a gaming experience"@en)
+AnnotationAssertion(rdfs:comment :contextOf "contesto specifico applicato a un'esperienza videoludica"@ita)
+SubObjectPropertyOf(:contextOf :featureOf)
+InverseObjectProperties(:contextOf :hasContext)
+
+# Object Property: :deuteragonistOf (:deuteragonistOf)
+
+AnnotationAssertion(rdfs:comment :deuteragonistOf "co-protagonist"@en)
+AnnotationAssertion(rdfs:comment :deuteragonistOf "co-protagonista"@ita)
+SubObjectPropertyOf(:deuteragonistOf :playableOf)
+
+# Object Property: :developedBy (:developedBy)
+
+AnnotationAssertion(rdfs:comment :developedBy "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :developedBy "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:developedBy :hasFeature)
+InverseObjectProperties(:developedBy :developerOf)
+ObjectPropertyDomain(:developedBy :Game)
+ObjectPropertyRange(:developedBy :Developer)
+
+# Object Property: :developerOf (:developerOf)
+
+AnnotationAssertion(rdfs:comment :developerOf "Real person that contributed to a videogame development"@en)
+AnnotationAssertion(rdfs:comment :developerOf "persona reale che ha sviluppato un titolo specifico"@ita)
+SubObjectPropertyOf(:developerOf :featureOf)
+
+# Object Property: :employedBy (:employedBy)
+
+AnnotationAssertion(rdfs:comment :employedBy "Subordination relationship of a developer to an employer. It has no reference domain as it may be both a development company or another lead developer, but also other special cases of relationship."@en)
+AnnotationAssertion(rdfs:comment :employedBy "rapporto di subordinazione di uno sviluppatore a un datore di lavoro, non ha dominio di riferimento in quanto può essere sia una casa di sviluppo o un altro sviluppatore-capo, ma anche altri casi particolari"@ita)
+InverseObjectProperties(:employedBy :hires)
+
+# Object Property: :employeeOf (:employeeOf)
+
+AnnotationAssertion(rdfs:comment :employeeOf "Describes a working relationship directly between individual developer and software house"@en)
+AnnotationAssertion(rdfs:comment :employeeOf "descrive un rapporto di lavoro direttamente tra singolo developer e software house"@ita)
+ObjectPropertyDomain(:employeeOf :Single)
+ObjectPropertyRange(:employeeOf :SoftwareHouse)
+
+# Object Property: :featureOf (:featureOf)
+
+AnnotationAssertion(rdfs:comment :featureOf "macroproprietà che racchiude al suo interno tutto ciò che può essere impiegato da un individual-descrizione per mettersi in relazione con un individual-videogioco, con individual-attore o con un individual-piattaforma"@ita)
+
+# Object Property: :gameplayOf (:gameplayOf)
+
+AnnotationAssertion(rdfs:comment :gameplayOf "Specific gameplay in a gaming experience"@en)
+AnnotationAssertion(rdfs:comment :gameplayOf "tipo di gameplay è inserito in un gioco"@ita)
+SubObjectPropertyOf(:gameplayOf :featureOf)
+InverseObjectProperties(:gameplayOf :hasGameplay)
+
+# Object Property: :hasContext (:hasContext)
+
+AnnotationAssertion(rdfs:comment :hasContext "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :hasContext "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:hasContext :hasFeature)
+ObjectPropertyDomain(:hasContext :Game)
+ObjectPropertyRange(:hasContext :Context)
+
+# Object Property: :hasFeature (:hasFeature)
+
+AnnotationAssertion(rdfs:comment :hasFeature "The conceptual inverse of \"featureof\", but having as subject the single game rather than the individual of the characteristic: for this reason, there will be always \"Game\" as their domain. Please refer to the dataproperty mentioned above for clarification on individual properties."@en)
+AnnotationAssertion(rdfs:comment :hasFeature "concettualmente l'inversa di caratteristicadi, ma con soggetto il gioco singolo piuttosto che l'individual della caratteristica: per questo hanno sempre Game come dominio. Si rimanda alla dataproperty sopra menzionata per avere chiarimenti sulle singole proprietà."@ita)
+
+# Object Property: :hasGameplay (:hasGameplay)
+
+AnnotationAssertion(rdfs:comment :hasGameplay "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :hasGameplay "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:hasGameplay :hasFeature)
+ObjectPropertyDomain(:hasGameplay :Game)
+ObjectPropertyRange(:hasGameplay :Gameplay)
+
+# Object Property: :hasMechanic (:hasMechanic)
+
+AnnotationAssertion(rdfs:comment :hasMechanic "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :hasMechanic "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:hasMechanic :hasFeature)
+InverseObjectProperties(:hasMechanic :mechanicOf)
+ObjectPropertyDomain(:hasMechanic :Game)
+ObjectPropertyRange(:hasMechanic :Mechanic)
+
+# Object Property: :hasNarrative (:hasNarrative)
+
+AnnotationAssertion(rdfs:comment :hasNarrative "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :hasNarrative "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:hasNarrative :hasFeature)
+InverseObjectProperties(:hasNarrative :narrationOf)
+ObjectPropertyDomain(:hasNarrative :Game)
+ObjectPropertyRange(:hasNarrative :Narrative)
+
+# Object Property: :hasPOV (:hasPOV)
+
+AnnotationAssertion(rdfs:comment :hasPOV "Refer to its inverse."@en)
+AnnotationAssertion(rdfs:comment :hasPOV "vedi la sua inversa"@ita)
+SubObjectPropertyOf(:hasPOV :hasFeature)
+ObjectPropertyDomain(:hasPOV :Game)
+ObjectPropertyRange(:hasPOV :POV)
+
+# Object Property: :hires (:hires)
+
+AnnotationAssertion(rdfs:comment :hires "Describes the subordination relationship from an employer to a developer"@en)
+AnnotationAssertion(rdfs:comment :hires "Descrive il rapporto di subordinazione da un datore di lavoro a uno sviluppatore"@ita)
+
+# Object Property: :includes (:includes)
+
+AnnotationAssertion(rdfs:comment :includes "Serve a identificare un rapporto di inclusione generico"@ita)
+AnnotationAssertion(rdfs:comment :includes "Used to identify a generic inclusion relationship"@en)
+InverseObjectProperties(:includes :partOf)
+
+# Object Property: :mechanicOf (:mechanicOf)
+
+AnnotationAssertion(rdfs:comment :mechanicOf "Specific game mechanic used in a title"@en)
+AnnotationAssertion(rdfs:comment :mechanicOf "meccanica programmata in un titolo"@ita)
+SubObjectPropertyOf(:mechanicOf :featureOf)
+
+# Object Property: :narrationOf (:narrationOf)
+
+AnnotationAssertion(rdfs:comment :narrationOf "Specific narrative line adopted in a video game"@en)
+AnnotationAssertion(rdfs:comment :narrationOf "linea narrativa adottata in un videogame"@ita)
+SubObjectPropertyOf(:narrationOf :featureOf)
+
+# Object Property: :partOf (:partOf)
+
+AnnotationAssertion(rdfs:comment :partOf "It is used to identify a generic inclusion relationship"@en)
+AnnotationAssertion(rdfs:comment :partOf "impiegato per identificare un rapporto di inclusione generico"@ita)
+ObjectPropertyDomain(:partOf :Game)
+
+# Object Property: :platformOf (:platformOf)
+
+AnnotationAssertion(rdfs:comment :platformOf "Device that can successfully start the game"@en)
+AnnotationAssertion(rdfs:comment :platformOf "dispositivo che può avviare correttamente il game"@ita)
+SubObjectPropertyOf(:platformOf :featureOf)
+
+# Object Property: :playableOf (:playableOf)
+
+AnnotationAssertion(rdfs:comment :playableOf "Character impersonable in a game"@en)
+AnnotationAssertion(rdfs:comment :playableOf "personaggio impersonabile in un titolo"@ita)
+SubObjectPropertyOf(:playableOf :characterOf)
+
+# Object Property: :prequelOf (:prequelOf)
+
+AnnotationAssertion(rdfs:comment :prequelOf "Transitive property that establishes whether a game is a prequel to another game"@en)
+AnnotationAssertion(rdfs:comment :prequelOf "proprietà transitiva che stabilisce se un gioco è prequel di un altro gioco"@ita)
+InverseObjectProperties(:prequelOf :sequelOf)
+TransitiveObjectProperty(:prequelOf)
+ObjectPropertyDomain(:prequelOf :Game)
+ObjectPropertyRange(:prequelOf :Game)
+
+# Object Property: :protagonistOf (:protagonistOf)
+
+AnnotationAssertion(rdfs:comment :protagonistOf "Main character"@en)
+AnnotationAssertion(rdfs:comment :protagonistOf "protagonista principale"@ita)
+SubObjectPropertyOf(:protagonistOf :playableOf)
+
+# Object Property: :secondaryOf (:secondaryOf)
+
+AnnotationAssertion(rdfs:comment :secondaryOf "Secondary characters"@en)
+AnnotationAssertion(rdfs:comment :secondaryOf "personaggi secondari")
+SubObjectPropertyOf(:secondaryOf :NPCOf)
+
+# Object Property: :sequelOf (:sequelOf)
+
+AnnotationAssertion(rdfs:comment :sequelOf "Transitive property that establishes whether a game is a sequel to another game"@en)
+AnnotationAssertion(rdfs:comment :sequelOf "proprietà transitiva che stabilisce se un gioco è sequel di un altro gioco"@ita)
+TransitiveObjectProperty(:sequelOf)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://purl.org/net/VideoGameOntology#endTime> (end time)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#endTime> "endTime describes the ending moment in time of a single Session. endTime connects the session to a DateTime value which holds the moment when the session ended."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#endTime> "end time"@en)
+DataPropertyDomain(<http://purl.org/net/VideoGameOntology#endTime> <http://purl.org/net/VideoGameOntology#Session>)
+DataPropertyRange(<http://purl.org/net/VideoGameOntology#endTime> xsd:dateTime)
+
+# Data Property: <http://purl.org/net/VideoGameOntology#eventName> (event name)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#eventName> "name connects InstantaneousEvent a text string. This allows the event to have a name to recognize it for."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#eventName> "event name"@en)
+DataPropertyDomain(<http://purl.org/net/VideoGameOntology#eventName> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+DataPropertyRange(<http://purl.org/net/VideoGameOntology#eventName> xsd:string)
+
+# Data Property: <http://purl.org/net/VideoGameOntology#eventTime> (event time)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#eventTime> "time describes the connection of InstantaneousEvent happening at a certain moment of time. time Conncets the event to a DateTime value that describes the moment when the event happened."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#eventTime> "event time"@en)
+DataPropertyDomain(<http://purl.org/net/VideoGameOntology#eventTime> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+DataPropertyRange(<http://purl.org/net/VideoGameOntology#eventTime> xsd:dateTime)
+
+# Data Property: <http://purl.org/net/VideoGameOntology#releaseDate> (release date)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#releaseDate> "releaseDate connects a game to a time which describes the release date of the game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#releaseDate> "release date"@en)
+DataPropertyDomain(<http://purl.org/net/VideoGameOntology#releaseDate> <http://purl.org/net/VideoGameOntology#Game>)
+DataPropertyRange(<http://purl.org/net/VideoGameOntology#releaseDate> xsd:dateTime)
+
+# Data Property: <http://purl.org/net/VideoGameOntology#startTime> (start time)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#startTime> "startTime describes the starting moment in time of a single Session. startTime connects the session to a DateTime value which holds the moment when the session started."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#startTime> "start time"@en)
+DataPropertyDomain(<http://purl.org/net/VideoGameOntology#startTime> <http://purl.org/net/VideoGameOntology#Session>)
+DataPropertyRange(<http://purl.org/net/VideoGameOntology#startTime> xsd:dateTime)
+
+# Data Property: <http://purl.org/net/VideoGameOntology#username> (username)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#username> "The username connects player to a text string which describes the username a player has."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#username> "username"@en)
+DataPropertyDomain(<http://purl.org/net/VideoGameOntology#username> <http://purl.org/net/VideoGameOntology#Player>)
+DataPropertyRange(<http://purl.org/net/VideoGameOntology#username> xsd:string)
+
+# Data Property: :hasReleaseDate (:hasReleaseDate)
+
+AnnotationAssertion(rdfs:comment :hasReleaseDate "Time value (xsd:dateTime) used to indicate the release date of a video game"@en)
+AnnotationAssertion(rdfs:comment :hasReleaseDate "valore temporale (xsd:dateTime) che serve a indicare la data di uscita di un videogioco"@ita)
+DataPropertyDomain(:hasReleaseDate :Game)
+DataPropertyRange(:hasReleaseDate xsd:dateTime)
+
+# Data Property: :income (:income)
+
+AnnotationAssertion(rdfs:comment :income "numerical value (xsd:float) for demonstration purposes: the ontology could be used to describe the gross profit of a videogame title"@en)
+AnnotationAssertion(rdfs:comment :income "valore numerico (xsd:float) a titolo dimostrativo che si potrebbe impiegare per descrivere il profitto lordo di un titolo videoludico"@ita)
+DataPropertyRange(:income xsd:float)
+
+# Data Property: :indie (:indie)
+
+AnnotationAssertion(rdfs:comment :indie "Boolean value (xsd:boolean) which indicates whether an individual of the Developer domain is independent or not"@en)
+AnnotationAssertion(rdfs:comment :indie "valore booleano (xsd:boolean) che indica se un individual del dominio Sviluppatore è indipendente o meno"@ita)
+DataPropertyDomain(:indie :Developer)
+DataPropertyRange(:indie xsd:boolean)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.org/net/VideoGameOntology#Achievement> (Achievement)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Achievement> "The vgo:Achievement is a reward gained in a game due to some event accomplished in the game. Achievements are commonly used in game industry to reward players for having accomplished tasks in the game. 
+This ontology defines various subclasses of vgo:Achievement, which are all based on the classification presented by Markus Montola et al. [Markus Montola, Timo Nummenmaa, Andrés Lucero, Marion Boberg, and Hannu Korhonen, 2009, “Applying game achievement systems to enhance user experience in a photo sharing service”, In Proceedings of the 13th International MindTrek Conference: Everyday Life in the Ubiquitous Era (MindTrek '09)] http://dl.acm.org/citation.cfm?id=1621859"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Achievement> "Achievement"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#Character> (Character)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Character> "A vgo:Character is any actor that can exists in a game. A character  can be a human-like creature as seen traditionally in video games. However, a character could also be a car, a paddle in game of Pong or spaceship of a space shooter game. This is often contextually related to the gameplay of a certain game. A character can be either controller by a player or by a computer."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Character> "Character"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#Collection> (Collection)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Collection> "The vgo:Collection type of achievement is typically rewarded from collecting an amount of certain items in a game. An example of vgo:Collection would be obtaining a full set of christmas clothes for a character to wear or collecting every possible flower in the game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Collection> "Collection"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Collection> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Completion> (Completion)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Completion> "The vgo:Completion type of achievement is usually rewarded from successfully completing a certain goal or subgoal in a game. An example of vgo:Completion would be to save a princess from a burning tower or completing all side-quests in a game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Completion> "Completion"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Completion> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Curiosity> (Curiosity)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Curiosity> "The vgo:Curiosity describes funny random things that can happen or be found in the game. An example could be jumping from the Eiffel tower without dying or following a comupter controlled character’s activities for one hour."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Curiosity> "Curiosity"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Curiosity> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Fandom> (Fandom)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Fandom> "The vgo:Fandom achievement is related to doing some true fan activities. An example of vgo:Fandom could be purchasing a collectors edition of the game or attending a fan gathering."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Fandom> "Fandom"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Fandom> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Feature> (Feature)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Feature> "vgo:Feature describes an ability or characteristic. For example, a sword could have “damage dealing” ability and a bottle of water could be “potable”."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Feature> "Feature"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#GainEvent> (gain event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#GainEvent> "The vgo:GainEvent describes an event that is related to character/player gaining something in a game. This is a subclass of vgo:GameEvent as gaining something is related to a specific game. For example, a player can gain a new character, achievement or item."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#GainEvent> "gain event"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#GainEvent> <http://purl.org/net/VideoGameOntology#GameEvent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Game> (Game)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Game> "The vgo:Game class describes a game product that can be played by a player.
+Examples of games are Pong, Grand Theft Auto, Pokemon and Need for Speed."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Game> "Game"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#GameEvent> (game event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#GameEvent> "The vgo:GameEvent describes an event that takes place in a game without straight player interaction. GameEvents are often very specific for each game. Examples of vgo:GameEvent could be an enemy dying, connecting to a multiplayer server, loading a new level or playing an animation."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#GameEvent> "game event"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#GameEvent> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#GameProduct> (game product)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#GameProduct> "A vgo:GameProduct is anything that is for sale inside a game. These can be either normal game items purchased with in-game currency or with real world money. An example of vgo:GameProduct could be a consumable health potion bought with real money, a better weapon or some visual improvement (e.g. Hats in Steam). Basically a game product can be anything, a character, an item or an achievement.
+GameProduct is a subclass of Good Relations: ProductOrService & schema:Product. Since vgo:GameProduct is a type of buyable product, it reuses the properties available in the schema and Good Relations, such as currency price, validity of the offer and so on."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#GameProduct> "game product"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#GameProduct> <http://purl.org/goodrelations/v1#ProductOrService>)
+SubClassOf(<http://purl.org/net/VideoGameOntology#GameProduct> <http://schema.org/Product>)
+SubClassOf(<http://purl.org/net/VideoGameOntology#GameProduct> ObjectUnionOf(<http://purl.org/net/VideoGameOntology#Achievement> <http://purl.org/net/VideoGameOntology#Character> <http://purl.org/net/VideoGameOntology#Game> <http://purl.org/net/VideoGameOntology#Item> <http://purl.org/net/VideoGameOntology#PlayingArea>))
+
+# Class: <http://purl.org/net/VideoGameOntology#Genre> (Genre)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Genre> "The vgo:Genre class describes the genre a game belongs to. All of the games have at least one genre. Examples of this are RPG, Simulator and Adventure"@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Genre> "Genre"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#HardMode> (hard mode)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#HardMode> "The vgo:HardMode achievement describes succeeding in a game on a high difficulty level. An example could be completing the “Doom” game on Nightmare difficulty level."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#HardMode> "hard mode"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#HardMode> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#InAppPurchaseEvent> (in-app purchase event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#InAppPurchaseEvent> "The vgo:InAppPurchaseEvent describes an event that is related to making a purchase with real money inside a game. This is a subclass of InstantaneousEvent because it happens at certain moment in time. An example of vgo:InAppPurchaseEvent would be unlocking secret levels with real money or purchasing better equipment with real money."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#InAppPurchaseEvent> "in-app purchase event"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#InAppPurchaseEvent> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#InstantaneousEvent> (instantaneous event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#InstantaneousEvent> "The vgo:InstantaneousEvent class describes an event that happens during the gameplay at a certain moment in time. This can be a player gaining an achievement, killing an enemy or making an in-app purchase."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#InstantaneousEvent> "instantaneous event"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#Item> (Item)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Item> "A vgo:Item portrays any item that exists in a game. The item can either be just visual part of the game or a concrete usable item. As an example an item could be a drinkable potion, a magical sword or just a flower pot."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Item> "Item"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#Leaderboard> (Leaderboard)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Leaderboard> "The vgo:Leaderboard class describes a ranking system of the players. There can be multiple rankings in a game, for example, the kill-count ranking of Modern Warfare or the best time listing of Formula 1 game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Leaderboard> "Leaderboard"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Leaderboard> owl:Thing)
+
+# Class: <http://purl.org/net/VideoGameOntology#LoseEvent> (lose event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#LoseEvent> "vgo:LoseEvent describes an event that is related to character/player losing something in a game. This is a subclass of GameEvent as gaining something is related to a specific game. For example, a player can lose a character due to trade with another player. Another example would be a character losing item due to consuming it."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#LoseEvent> "lose event"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#LoseEvent> <http://purl.org/net/VideoGameOntology#GameEvent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Loyalty> (Loyalty)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Loyalty> "The vgo:Loyalty achievement is used to give recognition to loyal players. For example, this could be an achievement received after subscribing to the game for a year."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Loyalty> "Loyalty"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Loyalty> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Luck> (Luck)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Luck> "The vgo:Lucky describes an achievement that is awarded to the player in a lucky situation. An example of vgo:Lucky achievement would be winning in a lottery or throwing “Yahtzee” without re-rolling the dice."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Luck> "Luck"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Luck> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#MenuEvent> (menu event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#MenuEvent> "The vgo:MenuEvent describes an event that is related to interacting with the ingame menu. An example of menu event is muting sounds, changing graphic settings, changing gameplay difficulty or remapping game controls."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#MenuEvent> "menu event"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#MenuEvent> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Minigame> (Minigame)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Minigame> "The vgo:Minigame achievement describes success in mini-games that have been included in a certain game but are not vital for completing the game. An example could be to complete all the Pizza deliveries in GTA minigame or gaining over 100 dollars while playing poker in Red Dead Redemption."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Minigame> "Minigame"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Minigame> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Multiplayer> (Multiplayer)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Multiplayer> "The vgo:Multiplayer achievement describes anything that can be awarded to one or multiple players due to their gameplay in multiplayer. For example, this could be winning 10 Team Fortress matches in a row with the same team or getting killed ten times in a row in Counter-Strike."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Multiplayer> "Multiplayer"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Multiplayer> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Paragon> (Paragon)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Paragon> "The vgo:Paragon is a rare achievement that is given only to limited number of players. An example of vgo:Paragon achievement could be the first player to finish a game under 10 hours or the first ten players to complete the game 100% through."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Paragon> "Paragon"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Paragon> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Player> (Player)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Player> "The vgo:Player describes the entity playing the game. This can be either a human or a computer. vgo:Player class is used to keep a profile of a certain playing entity and to connect all the games, achievements and characters he/she has. The vgo:Player is a subclass of foaf:Person as it contains all relative information of a certain person."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Player> "Player"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Player> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#PlayerEvent> (player event)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#PlayerEvent> "The vgo:PlayerEvent describes a vgo:InstantaneousEvent that is caused by the player. For example jumping in the game, throwing an item or pressing a joystick button."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#PlayerEvent> "player event"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#PlayerEvent> <http://purl.org/net/VideoGameOntology#InstantaneousEvent>)
+
+# Class: <http://purl.org/net/VideoGameOntology#PlayingArea> (playing area)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#PlayingArea> "The vgo:PlayingArea is the description of a place where the gameplay takes place. All of the games have some kind of area where they are played in. An example of playing areas could be football field in soccer game, a race track from a racing game or a star system of EVE Online."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#PlayingArea> "playing area"@en)
+
+# Class: <http://purl.org/net/VideoGameOntology#Session> (Session)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Session> "The vgo:Session class describes a session of gameplay. A session can be a single round of chess, a round of Counter-Strike, one half-time of soccer or one race of Formula 1. vgo:Session class can be used to store gameplay information, especially for analytical reasons."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Session> "Session"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Session> owl:Thing)
+
+# Class: <http://purl.org/net/VideoGameOntology#SpecialPlayStyle> (special play style)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#SpecialPlayStyle> "The vgo:SpecialPlayStyle achievement is awarded to players after playing a game in special fashion. Often this is something harder than the regular play and requires more player experience to excel in it. An example of vgo:SpecialPlayStyle could be to complete a game without any violence or against a timer."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#SpecialPlayStyle> "special play style"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#SpecialPlayStyle> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Tutorial> (Tutorial)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Tutorial> "The vgo:Tutorial achievement is  awarded to a player for trying out various features of the game. This is often related to learning how to play the game, how the controls work and how the game logic works. An example of vgo:Tutorial could be testing out newly gained special equipment or just playing through the in-game tutorial in the beginning."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Tutorial> "Tutorial"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Tutorial> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Veteran> (Veteran)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Veteran> "The vgo:Veteran achievement is an award that is given for accumulating a lot of play hours or game actions. For example, vgo:Veteran could be playing thousand hours of World of Tanks or making 100 goals in ice hockey game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Veteran> "Veteran"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Veteran> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: <http://purl.org/net/VideoGameOntology#Virtuosity> (Virtuosity)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/net/VideoGameOntology#Virtuosity> "The vgo:Virtuosity describes an achievement that is awarded for playing masterfully in the game. Examples of virtuous play could be finishing the game without saving at all, dying zero times or preventing an opposing team from scoring any goals in a soccer game."@en)
+AnnotationAssertion(rdfs:label <http://purl.org/net/VideoGameOntology#Virtuosity> "Virtuosity"@en)
+SubClassOf(<http://purl.org/net/VideoGameOntology#Virtuosity> <http://purl.org/net/VideoGameOntology#Achievement>)
+
+# Class: :Action (:Action)
+
+SubClassOf(:Action :Genre)
+
+# Class: :ActionRPG (:ActionRPG)
+
+AnnotationAssertion(rdfs:comment :ActionRPG "Action Role-Playing Game"@en)
+AnnotationAssertion(rdfs:comment :ActionRPG "RPG d'azione"@ita)
+EquivalentClasses(:ActionRPG ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Combat) ObjectHasValue(:hasMechanic :character_development)))
+SubClassOf(:ActionRPG :Action)
+SubClassOf(:ActionRPG :RPG)
+
+# Class: :Adventure (:Adventure)
+
+SubClassOf(:Adventure :Genre)
+
+# Class: :Agent (:Agent)
+
+AnnotationAssertion(rdfs:comment :Agent "Sociological actor inside or outside the game"@en)
+AnnotationAssertion(rdfs:comment :Agent "attore sociologico interno o esterno al gioco"@ita)
+
+# Class: :Art (:Art)
+
+SubClassOf(:Art :Gameplay)
+
+# Class: :Artistic (:Artistic)
+
+EquivalentClasses(:Artistic ObjectSomeValuesFrom(:hasGameplay :Art))
+SubClassOf(:Artistic :Other)
+DisjointClasses(:Artistic :Realistic)
+
+# Class: :Character (:Character)
+
+AnnotationAssertion(rdfs:comment :Character "Character encoded in the game"@en)
+AnnotationAssertion(rdfs:comment :Character "personaggio codificato nel game"@ita)
+SubClassOf(:Character :Fictional)
+
+# Class: :Choice (:Choice)
+
+AnnotationAssertion(rdfs:comment :Choice "Mechanic that allows the player to impart a direction besidesthe default one either to some elements of the game world or to the plot revolving around it. Choices often are the key to games with multiple endings, altough sone games employ more subtle element to determine an ending (i.e. the case of \"SIGNALIS\")"@en)
+AnnotationAssertion(rdfs:comment :Choice "meccanica che permette al giocatore di impartire una direzione diversa dalla predefinita ad alcuni elementi del mondo di gioco o alla trama. Le scelte sono spesso la chiave dei giochi che presentano diversi finali, tuttavia bisogna comprendere che possono esserci altri elementi più sottili che determinano quella variabile (ad esempio, si veda il caso del gioco \"SIGNALIS\")"@ita)
+SubClassOf(:Choice :Mechanic)
+
+# Class: :Collection (:Collection)
+
+AnnotationAssertion(rdfs:comment :Collection "Series of games"@en)
+AnnotationAssertion(rdfs:comment :Collection "le serie che contengono i giochi"@ita)
+EquivalentClasses(:Collection ObjectMinCardinality(2 :includes :Game))
+
+# Class: :Combat (:Combat)
+
+SubClassOf(:Combat :Gameplay)
+DisjointClasses(:Combat :Sportive)
+
+# Class: :Context (:Context)
+
+AnnotationAssertion(rdfs:comment :Context "Ad Hoc semantic class ideated to distinguish the different approaches a game retains when compared to everyday life"@en)
+AnnotationAssertion(rdfs:comment :Context "classe semantica ideata ad hoc per poter distinguere i diversi approcci che un videogioco può presentare nei confronti della nostra realtà quotidiana"@ita)
+
+# Class: :ContextualInteraction (:ContextualInteraction)
+
+AnnotationAssertion(rdfs:comment :ContextualInteraction "possibility of interaction with elements of the game, based on well-defined contexts. Usually the interaction occurs via the input of a dedicated button on the keyboard/joystick."@en)
+AnnotationAssertion(rdfs:comment :ContextualInteraction "possibilità di interagire con degli elementi di gioco in base a contesti ben definiti. Di solito l'interazione avviene per input di un pulsante dedicato della tastiera o del joystick."@ita)
+SubClassOf(:ContextualInteraction :Mechanic)
+DisjointClasses(:ContextualInteraction :PointAndClick)
+
+# Class: :DatingSim (:DatingSim)
+
+AnnotationAssertion(rdfs:comment :DatingSim "Dating and/or mating simulator"@en)
+AnnotationAssertion(rdfs:comment :DatingSim "simulatore di appuntamento romantico e/o erotico"@ita)
+EquivalentClasses(:DatingSim ObjectIntersectionOf(ObjectHasValue(:hasGameplay :romance_based) ObjectHasValue(:hasNarrative :emergent)))
+SubClassOf(:DatingSim :Simulator)
+
+# Class: :Developer (:Developer)
+
+AnnotationAssertion(rdfs:comment :Developer "Developer of the game"@en)
+AnnotationAssertion(rdfs:comment :Developer "attore che ha sviluppato il videogame")
+SubClassOf(:Developer :Real)
+
+# Class: :DrivingSim (:DrivingSim)
+
+AnnotationAssertion(rdfs:comment :DrivingSim "Vehicle driving simulator"@en)
+AnnotationAssertion(rdfs:comment :DrivingSim "simulatore di guida di veicoli"@ita)
+EquivalentClasses(:DrivingSim ObjectIntersectionOf(ObjectHasValue(:hasGameplay :vehicle_based) ObjectHasValue(:hasNarrative :evocation)))
+SubClassOf(:DrivingSim :Simulator)
+
+# Class: :DynamicAdventure (:DynamicAdventure)
+
+EquivalentClasses(:DynamicAdventure ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Combat) ObjectSomeValuesFrom(:hasGameplay :Exploration)))
+SubClassOf(:DynamicAdventure :Action)
+SubClassOf(:DynamicAdventure :Explorative)
+
+# Class: :Educational (:Educational)
+
+EquivalentClasses(:Educational ObjectSomeValuesFrom(:hasGameplay :Educative))
+SubClassOf(:Educational :Other)
+
+# Class: :Educative (:Educative)
+
+EquivalentClasses(:Educative ObjectSomeValuesFrom(:gameplayOf :Educational))
+SubClassOf(:Educative :Gameplay)
+
+# Class: :Emergent (:Emergent)
+
+AnnotationAssertion(rdfs:comment :Emergent "Player's options and/or choices have a concrete impact on the structure or the way the plot progresses"@en)
+AnnotationAssertion(rdfs:comment :Emergent "le opzioni e/o scelte del giocatore hanno un impatto concreto sulla struttura o sulla modalità di progresso della trama"@ita)
+SubClassOf(:Emergent :Narrative)
+DisjointClasses(:Emergent :Evocative)
+DisjointClasses(:Emergent :Framed)
+DisjointClasses(:Emergent :Simple)
+
+# Class: :Evocative (:Evocative)
+
+AnnotationAssertion(rdfs:comment :Evocative "The themes or elements within the game refer to brands or elements of social life, with the effect of triggering knowledge in the player starting from outside the title itself"@en)
+AnnotationAssertion(rdfs:comment :Evocative "i temi o gli elementi all’interno del gioco fanno riferimento a brand o elementi della vita mondana, con l’effetto di scatenare conoscenze nel giocatore a partire dall’esterno del titolo"@ita)
+SubClassOf(:Evocative :Narrative)
+
+# Class: :Exclusive (:Exclusive)
+
+AnnotationAssertion(rdfs:comment :Exclusive "Game has been released exclusively to a certain platform"@en)
+AnnotationAssertion(rdfs:comment :Exclusive "specifica se il titolo è stato rilasciato solo su una piattaforma"@ita)
+EquivalentClasses(:Exclusive ObjectIntersectionOf(:Game ObjectMaxCardinality(1 :compatibleWith :Platform)))
+SubClassOf(:Exclusive :Game)
+DisjointClasses(:Exclusive :Multiplatform)
+
+# Class: :Exploration (:Exploration)
+
+SubClassOf(:Exploration :Movement)
+
+# Class: :Explorative (:Explorative)
+
+SubClassOf(:Explorative :Adventure)
+
+# Class: :FPS (:FPS)
+
+AnnotationAssertion(rdfs:comment :FPS "First Person Shooter"@en)
+AnnotationAssertion(rdfs:comment :FPS "sparatutto in prima persona"@ita)
+EquivalentClasses(:FPS ObjectIntersectionOf(ObjectHasValue(:hasGameplay :free_shooting) ObjectHasValue(:hasPOV <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)))
+SubClassOf(:FPS :Shooter)
+DisjointClasses(:FPS :TPS)
+
+# Class: :FPSFantasy (:FPSFantasy)
+
+EquivalentClasses(:FPSFantasy ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Fantasy) ObjectHasValue(:hasGameplay :free_shooting) ObjectHasValue(:hasPOV <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)))
+SubClassOf(:FPSFantasy :FPS)
+
+# Class: :FPSRealistic (:FPSRealistic)
+
+EquivalentClasses(:FPSRealistic ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Realistic) ObjectHasValue(:hasGameplay :free_shooting) ObjectHasValue(:hasPOV <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)))
+SubClassOf(:FPSRealistic :FPS)
+
+# Class: :Familiar (:Familiar)
+
+AnnotationAssertion(rdfs:comment :Familiar "Game inspired by real events or verisimilar, with gimmicks such as historical points of divergence (e.g. the Fallout franchise occours in a reality where transistors weren't invented) or liminal contexts (such as a burglar breaking into an house)"@en)
+AnnotationAssertion(rdfs:comment :Familiar "gioco che prende ispirazione da eventi reali o simili, con stratagemmi come i punti di divergenza storici (es. fallout con non-creazione dei transistor) o contesti liminali (un ladro che ti entra in casa)"@ita)
+SubClassOf(:Familiar :Context)
+
+# Class: :FamiliarExploration (:FamiliarExploration)
+
+EquivalentClasses(:FamiliarExploration ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Familiar) ObjectSomeValuesFrom(:hasGameplay :Exploration)))
+SubClassOf(:FamiliarExploration :Explorative)
+
+# Class: :Fantasy (:Fantasy)
+
+AnnotationAssertion(rdfs:comment :Fantasy "Game offers elements entirely of fantasy and disconnected from worldly reality, in a positive fashion"@en)
+AnnotationAssertion(rdfs:comment :Fantasy "gioco propone elementi interamente di fantasia e sconnessi dalla realtà mondana, con accezione positiva"@ita)
+SubClassOf(:Fantasy :Context)
+DisjointClasses(:Fantasy :Realistic)
+
+# Class: :FantasyExploration (:FantasyExploration)
+
+EquivalentClasses(:FantasyExploration ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Fantasy) ObjectSomeValuesFrom(:hasGameplay :Exploration)))
+SubClassOf(:FantasyExploration :Explorative)
+
+# Class: :Fictional (:Fictional)
+
+AnnotationAssertion(rdfs:comment :Fictional "Sociological actor located inside the game"@en)
+AnnotationAssertion(rdfs:comment :Fictional "attore sociologico interno al gioco"@ita)
+SubClassOf(:Fictional :Agent)
+
+# Class: :Fighting (:Fighting)
+
+EquivalentClasses(:Fighting ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Multiplayer) ObjectHasValue(:hasGameplay :corpo_a_corpo)))
+SubClassOf(:Fighting :Action)
+
+# Class: :FirstPerson (:FirstPerson)
+
+AnnotationAssertion(rdfs:comment :FirstPerson "The events of the game are seen through the eyes of the playable character"@en)
+AnnotationAssertion(rdfs:comment :FirstPerson "vedere gli eventi del gioco attraverso gli occhi del personaggio giocabile"@ita)
+EquivalentClasses(:FirstPerson ObjectSomeValuesFrom(:POVOf :FPS))
+SubClassOf(:FirstPerson :PersonStandpoint)
+DisjointClasses(:FirstPerson :ThirdPerson)
+
+# Class: :Framed (:Framed)
+
+AnnotationAssertion(rdfs:comment :Framed "The narration is nested in multiple stories, probably with multiple protagonists, which then merge into a single and complex plot"@en)
+AnnotationAssertion(rdfs:comment :Framed "narrazione nidificata in più storie, probabilmente con più protagonisti, che poi vanno a confluire in un intreccio unico e complesso"@ita)
+SubClassOf(:Framed :Narrative)
+
+# Class: :Free (:Free)
+
+AnnotationAssertion(rdfs:comment :Free "Game doesent' offer a complex plot, rather gives the player a meager initial context in order to emphasize the creative possibilities"@en)
+AnnotationAssertion(rdfs:comment :Free "l gioco non propone tanto una trama complessa quanto un misero contesto iniziale, al fine di enfatizzare le possibilità creative del giocatore"@ita)
+SubClassOf(:Free :Context)
+
+# Class: :Game (:Game)
+
+AnnotationAssertion(rdfs:comment :Game "A single videogame title"@en)
+AnnotationAssertion(rdfs:comment :Game "categoria che esplora il singolo videogioco"@ita)
+SubClassOf(:Game ObjectSomeValuesFrom(:developedBy :Developer))
+SubClassOf(:Game ObjectSomeValuesFrom(:hasContext :Context))
+SubClassOf(:Game ObjectSomeValuesFrom(:hasGameplay :Gameplay))
+SubClassOf(:Game ObjectSomeValuesFrom(:hasMechanic :Mechanic))
+SubClassOf(:Game ObjectSomeValuesFrom(:hasNarrative :Narrative))
+SubClassOf(:Game ObjectSomeValuesFrom(:hasPOV :POV))
+
+# Class: :Gameplay (:Gameplay)
+
+AnnotationAssertion(rdfs:comment :Gameplay "Macroclass describing the variosus types of experience a videogame may present. In the easiest instances, there will be a single and namesake individual inside the class, in the most complex scenario there will be different instances of the same game mode."@en)
+AnnotationAssertion(rdfs:comment :Gameplay "macroclasse che descrive i  vari tipi di stile e di esperienza di gioco ritrovabili in un titolo. Nei casi più semplici le classi ospitano un individual omonimo per consentire una classificazione adeguata, nei casi più complessi invece troviamo più istanze della stessa modalità di gioco"@ita)
+
+# Class: :Genre (:Genre)
+
+AnnotationAssertion(rdfs:comment :Genre "Il genere del videogioco"@ita)
+AnnotationAssertion(rdfs:comment :Genre "The genre of the videogame"@en)
+SubClassOf(:Genre :Game)
+
+# Class: :Gore (:Gore)
+
+AnnotationAssertion(rdfs:comment :Gore "Game offers explicit and violent visual elements"@en)
+AnnotationAssertion(rdfs:comment :Gore "gioco con elementi visivi espliciti e violenti"@ita)
+EquivalentClasses(:Gore ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Grotesque) ObjectSomeValuesFrom(:hasGameplay :Combat) ObjectSomeValuesFrom(:hasGameplay :Movement)))
+SubClassOf(:Gore :Horror)
+
+# Class: :Grotesque (:Grotesque)
+
+AnnotationAssertion(rdfs:comment :Grotesque "Game offers typical horror or innatural elements"@en)
+AnnotationAssertion(rdfs:comment :Grotesque "il videogame vede al suo interno elementi tipicamente horror o innaturali"@ita)
+SubClassOf(:Grotesque :Context)
+
+# Class: :Horror (:Horror)
+
+SubClassOf(:Horror :Genre)
+
+# Class: :InteractiveMovie (:InteractiveMovie)
+
+EquivalentClasses(:InteractiveMovie ObjectIntersectionOf(ObjectSomeValuesFrom(:hasMechanic :Choice) ObjectSomeValuesFrom(:hasMechanic :ContextualInteraction)))
+SubClassOf(:InteractiveMovie :Adventure)
+
+# Class: :Inventory (:Inventory)
+
+AnnotationAssertion(rdfs:comment :Inventory "Display and selection systems of the objects collected by the player"@en)
+AnnotationAssertion(rdfs:comment :Inventory "sistemi di visualizzazione e selezione degli oggetti disponibili al giocatore"@ita)
+SubClassOf(:Inventory :Mechanic)
+
+# Class: :Isometric (:Isometric)
+
+AnnotationAssertion(rdfs:comment :Isometric "Views that frame a large portion of the playing area using an isometric POV or a \"pseudo 3D\" technique"@en)
+AnnotationAssertion(rdfs:comment :Isometric "visualizzazioni che inquadrano una grossa porzione dell’area di gioco impiegando punti di vista isometrici o tecniche di \"pseudo tridimensionalità\""@ita)
+SubClassOf(:Isometric :POV)
+DisjointClasses(:Isometric :PersonStandpoint)
+
+# Class: :JobSim (:JobSim)
+
+AnnotationAssertion(rdfs:comment :JobSim "Job simulation"@en)
+AnnotationAssertion(rdfs:comment :JobSim "simulatore di un mestiere"@ita)
+EquivalentClasses(:JobSim ObjectIntersectionOf(ObjectHasValue(:hasGameplay :job_based) ObjectHasValue(:hasNarrative :emergent)))
+SubClassOf(:JobSim :Simulator)
+
+# Class: :Lore (:Lore)
+
+AnnotationAssertion(rdfs:comment :Lore "inserimento di elementi narrativi indiretti del mondo di gioco"@ita)
+AnnotationAssertion(rdfs:comment :Lore "introduction of indirect narrative elements about the game world"@en)
+SubClassOf(:Lore :Gameplay)
+
+# Class: :Malee (:Malee)
+
+SubClassOf(:Malee :Combat)
+
+# Class: :Management (:Management)
+
+EquivalentClasses(:Management ObjectIntersectionOf(ObjectSomeValuesFrom(:hasMechanic :Choice) ObjectSomeValuesFrom(:hasNarrative :Simple) ObjectHasValue(:hasGameplay :value_based)))
+SubClassOf(:Management :Simulator)
+
+# Class: :Match (:Match)
+
+AnnotationAssertion(rdfs:comment :Match "Di solito da 2 a 4 giocatori si picchiano in incontri che terminano in base a un limite di tempo o al termine della barra della vita"@ita)
+AnnotationAssertion(rdfs:comment :Match "Usually 2 to 4 players beat each other in matches that end after some time or at one's health depletion"@en)
+EquivalentClasses(:Match ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Multiplayer) ObjectHasValue(:hasGameplay :corpo_a_corpo) ObjectHasValue(:hasGameplay :with_matches)))
+SubClassOf(:Match :Fighting)
+
+# Class: :Mechanic (:Mechanic)
+
+AnnotationAssertion(rdfs:comment :Mechanic "Macroclass descriving the game machanics. These differ from the gameplay as the mechanics occour regardless of a game's style or goals."@en)
+AnnotationAssertion(rdfs:comment :Mechanic "macroclasse che descrive le varie meccaniche di gioco ritrovabili in un titolo, sono diverse dal gameplay perchè le meccaniche prescindono sempre dallo stile di gioco adottato"@ita)
+
+# Class: :Metroidvania (:Metroidvania)
+
+AnnotationAssertion(rdfs:comment :Metroidvania "Peculiar type of video game that takes its name from its two progenitors, \"Metroid\" and \"Castlevania\". It is characterized by the side-scrolling view and the need to return to previously explored places taking advantage of new equipment unlocked as the story progresses"@en)
+AnnotationAssertion(rdfs:comment :Metroidvania "tipologia particolare di videgioco che prende il nome dai suoi due capostipite, \"Metroid\" e \"Castlevania\". Si caratterizza per la visuale a scorrimento laterale e la necessità di ritornare in luoghi già esplorati con nuovi equipaggiamenti sbloccati andando avanti nella trama."@ita)
+EquivalentClasses(:Metroidvania ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :OpenWorld) ObjectSomeValuesFrom(:hasGameplay :Puzzle) ObjectSomeValuesFrom(:hasMechanic :Inventory) ObjectSomeValuesFrom(:hasPOV :Isometric)))
+SubClassOf(:Metroidvania :Adventure)
+
+# Class: :Minigames (:Minigames)
+
+SubClassOf(:Minigames :Gameplay)
+
+# Class: :Movement (:Movement)
+
+SubClassOf(:Movement :Gameplay)
+
+# Class: :Multiplatform (:Multiplatform)
+
+AnnotationAssertion(rdfs:comment :Multiplatform "Game has been released on multiple platforms"@en)
+AnnotationAssertion(rdfs:comment :Multiplatform "specifica se il titolo è stato rilasciato su più di una piattaforma"@ita)
+EquivalentClasses(:Multiplatform ObjectIntersectionOf(:Game ObjectMinCardinality(2 :compatibleWith :Platform)))
+SubClassOf(:Multiplatform :Game)
+
+# Class: :Multiplayer (:Multiplayer)
+
+SubClassOf(:Multiplayer :Gameplay)
+
+# Class: :MultiplayerAvailable (:MultiplayerAvailable)
+
+AnnotationAssertion(rdfs:comment :MultiplayerAvailable "game ideated in multiplayer mode"@en)
+AnnotationAssertion(rdfs:comment :MultiplayerAvailable "gioco pensato in modalità a più giocatori"@ita)
+EquivalentClasses(:MultiplayerAvailable ObjectSomeValuesFrom(:hasGameplay :Multiplayer))
+SubClassOf(:MultiplayerAvailable :Genre)
+
+# Class: :NPC (:NPC)
+
+AnnotationAssertion(rdfs:comment :NPC "Non-playing character of the game"@en)
+AnnotationAssertion(rdfs:comment :NPC "personaggio non impersonabile dal giocatore"@ita)
+EquivalentClasses(:NPC ObjectSomeValuesFrom(:NPCOf :Game))
+SubClassOf(:NPC :Character)
+DisjointClasses(:NPC :Playable)
+
+# Class: :Narrative (:Narrative)
+
+AnnotationAssertion(rdfs:comment :Narrative "Macroclass describing the storytelling tecnique and the narrative elements in a videogame, semiotically seen ad a text."@en)
+AnnotationAssertion(rdfs:comment :Narrative "macroclasse che descrive in che categoria narrativa rientrano gli elementi narrativi all’interno di un testo videoludico"@ita)
+
+# Class: :NonRPG (:NonRPG)
+
+SubClassOf(:NonRPG :RPG)
+
+# Class: :OpenWorld (:OpenWorld)
+
+AnnotationAssertion(rdfs:comment :OpenWorld "game that offers to the player a very large world to roam, often filled with random events, points of interest (POI), locations to trade goods and find collectibles."@en)
+AnnotationAssertion(rdfs:comment :OpenWorld "gioco che offre al giocatore un mondo veramente ampio nel quale vagare, spesso riempito di eventi casuali, punti di interesse, punti per scambiare merci e oggetti da collezionare."@ita)
+SubClassOf(:OpenWorld :Exploration)
+
+# Class: :Other (:Other)
+
+AnnotationAssertion(rdfs:comment :Other "Game concieved as an outsider from the schemes that we profiled as the most classic"@en)
+AnnotationAssertion(rdfs:comment :Other "gioco che esce -principalmente per scelta- dagli schemi che abbiamo profilato come i più classici"@ita)
+SubClassOf(:Other :Genre)
+
+# Class: :POV (:POV)
+
+AnnotationAssertion(rdfs:comment :POV "Poin Of View: the visualization through which the gaming experience manifest itself in the eyes of the player"@en)
+AnnotationAssertion(rdfs:comment :POV "visualizzazione tramite la quale l'esperienza videoludica diventa manifesta agli occhi del giocatore"@ita)
+
+# Class: :Party (:Party)
+
+AnnotationAssertion(rdfs:comment :Party "Game made for parties"@en)
+AnnotationAssertion(rdfs:comment :Party "gioco creato apposta per feste")
+EquivalentClasses(:Party ObjectHasValue(:hasGameplay :Party))
+SubClassOf(:Party :MultiplayerAvailable)
+
+# Class: :PersonStandpoint (:PersonStandpoint)
+
+SubClassOf(:PersonStandpoint :POV)
+DisjointClasses(:PersonStandpoint :Textual)
+
+# Class: :Platform (:Platform)
+
+AnnotationAssertion(rdfs:comment :Platform "Hardware support of a game"@en)
+AnnotationAssertion(rdfs:comment :Platform "supporti hardware al videogioco"@ita)
+EquivalentClasses(:Platform ObjectSomeValuesFrom(:platformOf :Game))
+
+# Class: :Platformer (:Platformer)
+
+EquivalentClasses(:Platformer ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Puzzle) ObjectHasValue(:hasGameplay :standard_platform)))
+SubClassOf(:Platformer :Action)
+SubClassOf(:Platformer ObjectHasValue(:hasGameplay :standard_platform))
+
+# Class: :Playable (:Playable)
+
+AnnotationAssertion(rdfs:comment :Playable "Playable character of the game"@en)
+AnnotationAssertion(rdfs:comment :Playable "personaggio impersonabile dal giocatore"@ita)
+EquivalentClasses(:Playable ObjectSomeValuesFrom(:playableOf :Game))
+SubClassOf(:Playable :Character)
+
+# Class: :PointAndClick (:PointAndClick)
+
+AnnotationAssertion(rdfs:comment :PointAndClick "peculiar type of interaction with the game environment, based on clicking exclusively with the mouse or cursor on particular elements of the scenario"@en)
+AnnotationAssertion(rdfs:comment :PointAndClick "tipo particolare di interazione con l'ambiente di gioco basato esclusivamente sul cliccare esclusivamente con il mouse alcuni elementi particolari dello scenario")
+SubClassOf(:PointAndClick :Mechanic)
+
+# Class: :Pseudonym (:Pseudonym)
+
+AnnotationAssertion(rdfs:comment :Pseudonym "Identifies alter egos of real people in the game or states relationships between Fictional- and Real- individuals that may refer to the same Agent, using the OWL relationship \"Same_Indivudal_As\""@en)
+AnnotationAssertion(rdfs:comment :Pseudonym "identifica alter ego nel gioco di persone reali o per stabilire relazioni tra individuals fittizi e reali che fanno riferimento allo stesso agente tramite la relazione OWL \"Same_Indivudal_As\"")
+SubClassOf(:Pseudonym :Fictional)
+
+# Class: :Psychological (:Psychological)
+
+AnnotationAssertion(rdfs:comment :Psychological "Game offers elements of psychological violence"@en)
+AnnotationAssertion(rdfs:comment :Psychological "gioco con elementi di violenza psicologica"@ita)
+EquivalentClasses(:Psychological ObjectIntersectionOf(ObjectSomeValuesFrom(:hasMechanic :Choice) ObjectHasValue(:hasContext :psychological)))
+SubClassOf(:Psychological :Horror)
+
+# Class: :Puzzle (:Puzzle)
+
+SubClassOf(:Puzzle :Gameplay)
+
+# Class: :PuzzleGame (:PuzzleGame)
+
+EquivalentClasses(:PuzzleGame ObjectSomeValuesFrom(:hasGameplay :Puzzle))
+SubClassOf(:PuzzleGame :Other)
+
+# Class: :QTE (:QTE)
+
+AnnotationAssertion(rdfs:comment :QTE "A Quick-Time-Event is a mechanic that tests the player's reflexes by making them press a specific button at the right time"@en)
+AnnotationAssertion(rdfs:comment :QTE "un Quick-Time Event è una meccanica che mette alla prova i riflessi del giocatore facendogli premere un pulsante specifico al momento giusto"@ita)
+SubClassOf(:QTE :Mechanic)
+
+# Class: :RPG (:RPG)
+
+AnnotationAssertion(rdfs:comment :RPG "Role-Playing Game"@en)
+AnnotationAssertion(rdfs:comment :RPG "gioco di ruolo (GDR)"@ita)
+SubClassOf(:RPG :Genre)
+
+# Class: :Real (:Real)
+
+AnnotationAssertion(rdfs:comment :Real "Sociological actor located outside the game"@en)
+AnnotationAssertion(rdfs:comment :Real "attore sociologico esterno al gioco"@ita)
+SubClassOf(:Real :Agent)
+
+# Class: :Realistic (:Realistic)
+
+AnnotationAssertion(rdfs:comment :Realistic "Narrative creativity does not find space within the videogame, as it tries to be a realistic reconstruction without fictional elements"@en)
+AnnotationAssertion(rdfs:comment :Realistic "la creatività narrativa non trova spazio dentro il videogioco, in quanto si tratta di una ricostruzione realistica e senza elementi di fantasia"@ita)
+SubClassOf(:Realistic :Context)
+
+# Class: :Roguelike (:Roguelike)
+
+AnnotationAssertion(rdfs:comment :Roguelike "Game typically features dungeon exploration -which levels are procedurally generated- turn-based combat and permanent death (permadeath) of the player character"@en)
+AnnotationAssertion(rdfs:comment :Roguelike "gioco caratterizzato tipicamente dall'esplorazione di un dungeon attraverso livelli generati proceduralmente, combattimenti a turni e morte permanente del personaggio giocante")
+EquivalentClasses(:Roguelike ObjectIntersectionOf(ObjectHasValue(:hasGameplay :dungeon_exploration) ObjectHasValue(:hasGameplay :turn_based) ObjectHasValue(:hasMechanic :permanent_death)))
+SubClassOf(:Roguelike :RPG)
+
+# Class: :SandBox (:SandBox)
+
+AnnotationAssertion(rdfs:comment :SandBox "Games that use freely explorable levels -without the limit of invisible walls- which can be completed in different ways and with an emphasis on creative possibilities"@en)
+AnnotationAssertion(rdfs:comment :SandBox "videogiochi che utilizzano livelli liberamente esplorabili, senza muri invisibili, completabili in diversi modi e con enfasi sulle possibilità creative"@ita)
+EquivalentClasses(:SandBox ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Simulation) ObjectSomeValuesFrom(:hasNarrative :Narrative) ObjectHasValue(:hasGameplay :creation_based) ObjectHasValue(:hasNarrative :emergent)))
+SubClassOf(:SandBox :Simulator)
+
+# Class: :Scrolling (:Scrolling)
+
+AnnotationAssertion(rdfs:comment :Scrolling "\"beat 'em up\" dove il giocatore combatte i nemici su una mappa a scorrimento laterale"@ita)
+AnnotationAssertion(rdfs:comment :Scrolling "scrolling \"beat 'em up\" where players fight enemies on a scrolling map"@en)
+EquivalentClasses(:Scrolling ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Multiplayer) ObjectHasValue(:hasGameplay :corpo_a_corpo) ObjectHasValue(:hasPOV :side_scrolling)))
+SubClassOf(:Scrolling :Fighting)
+
+# Class: :Shooter (:Shooter)
+
+EquivalentClasses(:Shooter ObjectHasValue(:hasGameplay :free_shooting))
+SubClassOf(:Shooter :Action)
+
+# Class: :Shooting (:Shooting)
+
+SubClassOf(:Shooting :Combat)
+
+# Class: :Simple (:Simple)
+
+AnnotationAssertion(rdfs:comment :Simple "Classic single track storytelling"@en)
+AnnotationAssertion(rdfs:comment :Simple "classica narrazione su binario singolo"@ita)
+SubClassOf(:Simple :Narrative)
+
+# Class: :Simulation (:Simulation)
+
+SubClassOf(:Simulation :Gameplay)
+
+# Class: :Simulator (:Simulator)
+
+AnnotationAssertion(rdfs:comment :Simulator "giochi dove si simula uno scenario specifico")
+SubClassOf(:Simulator :Genre)
+SubClassOf(:Simulator ObjectSomeValuesFrom(:hasContext :Free))
+SubClassOf(:Simulator ObjectSomeValuesFrom(:hasGameplay :Simulation))
+
+# Class: :Single (:Single)
+
+AnnotationAssertion(rdfs:comment :Single "Individual developer"@en)
+AnnotationAssertion(rdfs:comment :Single "singolo sviluppatore"@ita)
+EquivalentClasses(:Single DataHasValue(:indie "true"^^xsd:boolean))
+SubClassOf(:Single :Developer)
+
+# Class: :SoftwareHouse (:SoftwareHouse)
+
+AnnotationAssertion(rdfs:comment :SoftwareHouse "Collective of developers"@en)
+AnnotationAssertion(rdfs:comment :SoftwareHouse "collettivo di sviluppatori"@ita)
+EquivalentClasses(:SoftwareHouse ObjectSomeValuesFrom(:hires :Developer))
+SubClassOf(:SoftwareHouse :Developer)
+
+# Class: :Sport (:Sport)
+
+EquivalentClasses(:Sport ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Sportive) ObjectHasValue(:hasNarrative :evocation)))
+SubClassOf(:Sport :Simulator)
+
+# Class: :Sportive (:Sportive)
+
+SubClassOf(:Sportive :Simulation)
+
+# Class: :Stealth (:Stealth)
+
+AnnotationAssertion(rdfs:comment :Stealth "Game with intense player hiding mechanics"@en)
+AnnotationAssertion(rdfs:comment :Stealth "gioco con meccaniche intense di occultamento del giocatore")
+EquivalentClasses(:Stealth ObjectHasValue(:hasGameplay :standard_stealth))
+SubClassOf(:Stealth :Action)
+
+# Class: :Strategic (:Strategic)
+
+EquivalentClasses(:Strategic ObjectSomeValuesFrom(:hasGameplay :Strategy))
+SubClassOf(:Strategic :Genre)
+
+# Class: :Strategy (:Strategy)
+
+SubClassOf(:Strategy :Gameplay)
+
+# Class: :Survival (:Survival)
+
+EquivalentClasses(:Survival ObjectHasValue(:hasGameplay :escape))
+SubClassOf(:Survival :Action)
+
+# Class: :SurvivalHorror (:SurvivalHorror)
+
+AnnotationAssertion(rdfs:comment :SurvivalHorror "Game where the enemies are more than the resources to fight them"@en)
+AnnotationAssertion(rdfs:comment :SurvivalHorror "Il gioco presenta la mancanza delle risorse necessarie ad eliminare ogni nemico"@ita)
+EquivalentClasses(:SurvivalHorror ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Grotesque) ObjectHasValue(:hasGameplay :escape)))
+SubClassOf(:SurvivalHorror :Horror)
+
+# Class: :TPS (:TPS)
+
+AnnotationAssertion(rdfs:comment :TPS "Third Person Shooter"@en)
+AnnotationAssertion(rdfs:comment :TPS "sparatutto in terza persona"@ita)
+EquivalentClasses(:TPS ObjectIntersectionOf(ObjectHasValue(:hasGameplay :free_shooting) ObjectHasValue(:hasPOV <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)))
+SubClassOf(:TPS :Shooter)
+
+# Class: :TPSFantasy (:TPSFantasy)
+
+EquivalentClasses(:TPSFantasy ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Fantasy) ObjectHasValue(:hasGameplay :free_shooting) ObjectHasValue(:hasPOV <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)))
+SubClassOf(:TPSFantasy :TPS)
+
+# Class: :TPSRealistic (:TPSRealistic)
+
+EquivalentClasses(:TPSRealistic ObjectIntersectionOf(ObjectSomeValuesFrom(:hasContext :Realistic) ObjectHasValue(:hasGameplay :free_shooting) ObjectHasValue(:hasPOV <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)))
+SubClassOf(:TPSRealistic :TPS)
+
+# Class: :Tactic (:Tactic)
+
+EquivalentClasses(:Tactic ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Strategy) ObjectSomeValuesFrom(:hasMechanic :Management)))
+SubClassOf(:Tactic :Shooter)
+
+# Class: :Textual (:Textual)
+
+AnnotationAssertion(rdfs:comment :Textual "Game presents itself mainly as in a text form, typical of text adventures or interactive fiction"@en)
+AnnotationAssertion(rdfs:comment :Textual "il gioco viene visualizzato principalmente in formato di testo"@ita)
+SubClassOf(:Textual :POV)
+
+# Class: :ThirdPerson (:ThirdPerson)
+
+AnnotationAssertion(rdfs:comment :ThirdPerson "The events of the game are seen framed alongside the playable character"@en)
+AnnotationAssertion(rdfs:comment :ThirdPerson "vedere gli eventi del gioco incorniciati al personaggio giocabile"@ita)
+EquivalentClasses(:ThirdPerson ObjectSomeValuesFrom(:POVOf :TPS))
+SubClassOf(:ThirdPerson :PersonStandpoint)
+
+# Class: :VisualNovel (:VisualNovel)
+
+AnnotationAssertion(rdfs:comment :VisualNovel "Peculiar type of game characterized both by an interactive adventure with mulltiple choices that influence the plot as well as the heavy presence of text. The visual elements (images, short films) mostly frame the text."@en)
+AnnotationAssertion(rdfs:comment :VisualNovel "il \"romanzo visivo\" è un tipo particolare di gameplay caratterizzato da una avventura interattiva con scelte che influenzano la trama e dalla forte presenza di testo. Gli elementi visivi (immagini, brevi filmati) fanno più che altro da cornice al testo e non sono elemento di interazione."@ita)
+EquivalentClasses(:VisualNovel ObjectIntersectionOf(ObjectSomeValuesFrom(:hasGameplay :Puzzle) ObjectSomeValuesFrom(:hasMechanic :Choice) ObjectSomeValuesFrom(:hasMechanic :QTE) ObjectSomeValuesFrom(:hasPOV :Textual) ObjectHasValue(:hasNarrative :simple)))
+SubClassOf(:VisualNovel :Adventure)
+
+# Class: owl:Thing (owl:Thing)
+
+AnnotationAssertion(rdfs:comment owl:Thing "State of the art of the Videogame Industry"@en)
+AnnotationAssertion(rdfs:comment owl:Thing "stato dell’arte dell’industria videoludica"@ita)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :AC (:AC)
+
+ObjectPropertyAssertion(:includes :AC <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED>)
+
+# Individual: :ASCII (:ASCII)
+
+ClassAssertion(:Textual :ASCII)
+
+# Individual: :BANDAI_NAMCO (:BANDAI_NAMCO)
+
+AnnotationAssertion(rdfs:comment :BANDAI_NAMCO <https://it.wikipedia.org/wiki/Bandai_Namco>)
+ObjectPropertyAssertion(:developerOf :BANDAI_NAMCO :TEKKEN_7)
+
+# Individual: :BIG_BRAIN_ACADEMY (:BIG_BRAIN_ACADEMY)
+
+AnnotationAssertion(rdfs:comment :BIG_BRAIN_ACADEMY <https://it.wikipedia.org/wiki/Big_Brain_Academy:_Wii_Degree>)
+ObjectPropertyAssertion(:compatibleWith :BIG_BRAIN_ACADEMY :Nintendo_Ds)
+ObjectPropertyAssertion(:developedBy :BIG_BRAIN_ACADEMY :Nintendo)
+ObjectPropertyAssertion(:hasContext :BIG_BRAIN_ACADEMY :acquisition)
+ObjectPropertyAssertion(:hasGameplay :BIG_BRAIN_ACADEMY :Co-op)
+ObjectPropertyAssertion(:hasGameplay :BIG_BRAIN_ACADEMY :learning)
+DataPropertyAssertion(:hasReleaseDate :BIG_BRAIN_ACADEMY "2005-06-30T00:00:00"^^xsd:dateTime)
+
+# Individual: :BINDING_OF_ISAAC (:BINDING_OF_ISAAC)
+
+AnnotationAssertion(rdfs:comment :BINDING_OF_ISAAC <https://it.wikipedia.org/wiki/The_Binding_of_Isaac>)
+ObjectPropertyAssertion(:compatibleWith :BINDING_OF_ISAAC :Pc_gaming)
+ObjectPropertyAssertion(:hasGameplay :BINDING_OF_ISAAC :dungeon_exploration)
+ObjectPropertyAssertion(:hasGameplay :BINDING_OF_ISAAC :real_time)
+ObjectPropertyAssertion(:hasMechanic :BINDING_OF_ISAAC :multiple_choice)
+ObjectPropertyAssertion(:hasMechanic :BINDING_OF_ISAAC :permanent_death)
+ObjectPropertyAssertion(:hasPOV :BINDING_OF_ISAAC :standard_isometrics)
+
+# Individual: :BioWare (:BioWare)
+
+AnnotationAssertion(rdfs:comment :BioWare <https://it.wikipedia.org/wiki/BioWare>)
+ObjectPropertyAssertion(:developerOf :BioWare :MASS_EFFECT_III)
+
+# Individual: :CALL_OF_DUTY (:CALL_OF_DUTY)
+
+AnnotationAssertion(rdfs:comment :CALL_OF_DUTY <https://it.wikipedia.org/wiki/Call_of_Duty_(videogioco)>)
+ObjectPropertyAssertion(:compatibleWith :CALL_OF_DUTY :Pc_gaming)
+ObjectPropertyAssertion(:developedBy :CALL_OF_DUTY :Infinity_Ward)
+ObjectPropertyAssertion(:hasContext :CALL_OF_DUTY :historical)
+ObjectPropertyAssertion(:hasGameplay :CALL_OF_DUTY :PVP)
+ObjectPropertyAssertion(:hasGameplay :CALL_OF_DUTY :free_shooting)
+ObjectPropertyAssertion(:hasNarrative :CALL_OF_DUTY :simple)
+ObjectPropertyAssertion(:hasPOV :CALL_OF_DUTY <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+DataPropertyAssertion(:hasReleaseDate :CALL_OF_DUTY "2003-10-29T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:income :CALL_OF_DUTY "400000.0"^^xsd:float)
+
+# Individual: :CAPCOM (:CAPCOM)
+
+AnnotationAssertion(rdfs:comment :CAPCOM <https://it.wikipedia.org/wiki/Capcom%20>)
+
+# Individual: :Co-op (:Co-op)
+
+AnnotationAssertion(rdfs:comment :Co-op "Stile di gioco cooperativo"@ita)
+AnnotationAssertion(rdfs:comment :Co-op "cooperative gameplay"@en)
+ClassAssertion(:Multiplayer :Co-op)
+
+# Individual: :EPIC_GAMES (:EPIC_GAMES)
+
+AnnotationAssertion(rdfs:comment :EPIC_GAMES <https://it.wikipedia.org/wiki/Epic_Games>)
+ObjectPropertyAssertion(:developerOf :EPIC_GAMES :FORTNITE)
+
+# Individual: :Edmund_McMillen (:Edmund_McMillen)
+
+AnnotationAssertion(rdfs:comment :Edmund_McMillen <https://it.wikipedia.org/wiki/Edmund_McMillen>)
+ObjectPropertyAssertion(:developerOf :Edmund_McMillen :BINDING_OF_ISAAC)
+DataPropertyAssertion(:indie :Edmund_McMillen "true"^^xsd:boolean)
+
+# Individual: :Electronic_Arts (:Electronic_Arts)
+
+AnnotationAssertion(rdfs:comment :Electronic_Arts <https://it.wikipedia.org/wiki/Electronic_Arts>)
+ObjectPropertyAssertion(:developerOf :Electronic_Arts :FIFA_2022)
+
+# Individual: :FABLE (:FABLE)
+
+AnnotationAssertion(rdfs:comment :FABLE <https://it.wikipedia.org/wiki/Fable_(videogioco_2004)>)
+ObjectPropertyAssertion(:compatibleWith :FABLE :Pc_gaming)
+ObjectPropertyAssertion(:compatibleWith :FABLE :XBOX_360)
+ObjectPropertyAssertion(:developedBy :FABLE :Lionehead_studios)
+ObjectPropertyAssertion(:hasContext :FABLE :mithical)
+ObjectPropertyAssertion(:hasGameplay :FABLE :free_roaming)
+ObjectPropertyAssertion(:hasGameplay :FABLE :real_time)
+ObjectPropertyAssertion(:hasMechanic :FABLE :character_development)
+
+# Individual: :FIFA_2022 (:FIFA_2022)
+
+AnnotationAssertion(rdfs:comment :FIFA_2022 <https://it.wikipedia.org/wiki/FIFA_22>)
+ObjectPropertyAssertion(:hasGameplay :FIFA_2022 :PVP)
+ObjectPropertyAssertion(:hasGameplay :FIFA_2022 :agonistic)
+ObjectPropertyAssertion(:hasNarrative :FIFA_2022 :evocation)
+
+# Individual: :FORTNITE (:FORTNITE)
+
+AnnotationAssertion(rdfs:comment :FORTNITE <https://it.wikipedia.org/wiki/Fortnite>)
+ObjectPropertyAssertion(:hasGameplay :FORTNITE :Open_map)
+ObjectPropertyAssertion(:hasGameplay :FORTNITE :PVP)
+ObjectPropertyAssertion(:hasGameplay :FORTNITE :Party)
+ObjectPropertyAssertion(:hasGameplay :FORTNITE :creation_based)
+ObjectPropertyAssertion(:hasGameplay :FORTNITE :free_shooting)
+ObjectPropertyAssertion(:hasNarrative :FORTNITE :emergent)
+ObjectPropertyAssertion(:hasPOV :FORTNITE <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+
+# Individual: :General_Sheperd (:General_Sheperd)
+
+ObjectPropertyAssertion(:antagonistOf :General_Sheperd :CALL_OF_DUTY)
+
+# Individual: :Infinity_Ward (:Infinity_Ward)
+
+AnnotationAssertion(rdfs:comment :Infinity_Ward <https://it.wikipedia.org/wiki/Infinity_Ward>)
+
+# Individual: :Item_description_based (:Item_description_based)
+
+ClassAssertion(:Lore :Item_description_based)
+
+# Individual: :Lionehead_studios (:Lionehead_studios)
+
+AnnotationAssertion(rdfs:comment :Lionehead_studios <https://it.wikipedia.org/wiki/Lionhead_Studios>)
+
+# Individual: :MASS_EFFECT_III (:MASS_EFFECT_III)
+
+AnnotationAssertion(rdfs:comment :MASS_EFFECT_III <https://it.wikipedia.org/wiki/Mass_Effect_3>)
+ObjectPropertyAssertion(:hasContext :MASS_EFFECT_III :space_wars)
+ObjectPropertyAssertion(:hasGameplay :MASS_EFFECT_III :free_shooting)
+ObjectPropertyAssertion(:hasPOV :MASS_EFFECT_III <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+DataPropertyAssertion(:hasReleaseDate :MASS_EFFECT_III "2012-03-06T00:00:00"^^xsd:dateTime)
+
+# Individual: :MINECRAFT (:MINECRAFT)
+
+AnnotationAssertion(rdfs:comment :MINECRAFT <https://it.wikipedia.org/wiki/Minecraft%20>)
+ObjectPropertyAssertion(:compatibleWith :MINECRAFT :PS4)
+ObjectPropertyAssertion(:compatibleWith :MINECRAFT :Pc_gaming)
+ObjectPropertyAssertion(:compatibleWith :MINECRAFT :XBOX_ONE)
+ObjectPropertyAssertion(:hasGameplay :MINECRAFT :corpo_a_corpo)
+ObjectPropertyAssertion(:hasGameplay :MINECRAFT :creation_based)
+ObjectPropertyAssertion(:hasGameplay :MINECRAFT :free_roaming)
+ObjectPropertyAssertion(:hasMechanic :MINECRAFT :looting_based)
+ObjectPropertyAssertion(:hasNarrative :MINECRAFT :emergent)
+DataPropertyAssertion(:hasReleaseDate :MINECRAFT "2011-11-18T00:00:00"^^xsd:dateTime)
+
+# Individual: :MONUMENT_VALLEY_II (:MONUMENT_VALLEY_II)
+
+AnnotationAssertion(rdfs:comment :MONUMENT_VALLEY_II <https://en.wikipedia.org/wiki/Monument_Valley_2>)
+ObjectPropertyAssertion(:compatibleWith :MONUMENT_VALLEY_II :Android)
+ObjectPropertyAssertion(:compatibleWith :MONUMENT_VALLEY_II :Apple)
+ObjectPropertyAssertion(:compatibleWith :MONUMENT_VALLEY_II :Pc_gaming)
+ObjectPropertyAssertion(:hasContext :MONUMENT_VALLEY_II :creative_freedom)
+ObjectPropertyAssertion(:hasGameplay :MONUMENT_VALLEY_II :painting)
+ObjectPropertyAssertion(:hasGameplay :MONUMENT_VALLEY_II <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle>)
+ObjectPropertyAssertion(:hasNarrative :MONUMENT_VALLEY_II :simple)
+ObjectPropertyAssertion(:hasPOV :MONUMENT_VALLEY_II :standard_isometrics)
+DataPropertyAssertion(:hasReleaseDate :MONUMENT_VALLEY_II "2017-06-05T00:00:00"^^xsd:dateTime)
+
+# Individual: :Markus_Perrson (:Markus_Perrson)
+
+SameIndividual(:Markus_Perrson :Notch)
+ObjectPropertyAssertion(:developerOf :Markus_Perrson :MINECRAFT)
+ObjectPropertyAssertion(:employedBy :Markus_Perrson :Mojang)
+DataPropertyAssertion(:indie :Markus_Perrson "true"^^xsd:boolean)
+
+# Individual: :Mojang (:Mojang)
+
+AnnotationAssertion(rdfs:comment :Mojang <https://it.wikipedia.org/wiki/Mojang>)
+ObjectPropertyAssertion(:developerOf :Mojang :MINECRAFT)
+
+# Individual: :Nintendo (:Nintendo)
+
+AnnotationAssertion(rdfs:comment :Nintendo <https://www.nintendo.it>)
+
+# Individual: :Notch (:Notch)
+
+ClassAssertion(:Pseudonym :Notch)
+
+# Individual: :OUTLAST (:OUTLAST)
+
+AnnotationAssertion(rdfs:comment :OUTLAST <https://it.wikipedia.org/wiki/Outlast>)
+ObjectPropertyAssertion(:hasContext :OUTLAST :paranormal)
+ObjectPropertyAssertion(:hasGameplay :OUTLAST :Item_description_based)
+ObjectPropertyAssertion(:hasGameplay :OUTLAST :escape)
+ObjectPropertyAssertion(:hasGameplay :OUTLAST :exploration_narrative_tracks)
+ObjectPropertyAssertion(:hasPOV :OUTLAST <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+
+# Individual: :OpenWorld (:OpenWorld)
+
+ClassAssertion(:OpenWorld :OpenWorld)
+
+# Individual: :Open_map (:Open_map)
+
+ClassAssertion(:OpenWorld :Open_map)
+
+# Individual: :PVE (:PVE)
+
+AnnotationAssertion(rdfs:comment :PVE "Giocatore contro ambiente"@ita)
+AnnotationAssertion(rdfs:comment :PVE "Player Versus Enviroment"@en)
+ClassAssertion(:Multiplayer :PVE)
+
+# Individual: :PVP (:PVP)
+
+AnnotationAssertion(rdfs:comment :PVP "Giocatore contro giocatore"@ita)
+AnnotationAssertion(rdfs:comment :PVP "Player Versus Player"@en)
+ClassAssertion(:Multiplayer :PVP)
+
+# Individual: :Party (:Party)
+
+ClassAssertion(:Multiplayer :Party)
+
+# Individual: :Price (:Price)
+
+ObjectPropertyAssertion(:deuteragonistOf :Price :CALL_OF_DUTY)
+
+# Individual: :QTE (:QTE)
+
+ClassAssertion(:Mechanic :QTE)
+
+# Individual: :RESIDENT_EVIL (:RESIDENT_EVIL)
+
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL :standard_isometrics)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL :RESIDENT_EVIL_2)
+
+# Individual: :RESIDENT_EVIL_0 (:RESIDENT_EVIL_0)
+
+AnnotationAssertion(rdfs:comment :RESIDENT_EVIL_0 <https://it.wikipedia.org/wiki/Resident_Evil_Zero>)
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_0 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_0 :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_0 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_0 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_0 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_0 :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_0 :standard_isometrics)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_0 :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL_0 :RESIDENT_EVIL)
+
+# Individual: :RESIDENT_EVIL_2 (:RESIDENT_EVIL_2)
+
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_2 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_2 :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_2 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_2 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_2 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_2 :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_2 :standard_isometrics)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_2 :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL_2 :RESIDENT_EVIL_3)
+
+# Individual: :RESIDENT_EVIL_3 (:RESIDENT_EVIL_3)
+
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_3 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_3 :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_3 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_3 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_3 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_3 :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_3 :standard_isometrics)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_3 :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL_3 :RESIDENT_EVIL_4)
+
+# Individual: :RESIDENT_EVIL_4 (:RESIDENT_EVIL_4)
+
+AnnotationAssertion(rdfs:comment :RESIDENT_EVIL_4 <https://it.wikipedia.org/wiki/Resident_Evil_4>)
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_4 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_4 :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_4 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_4 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_4 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_4 :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_4 <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_4 :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL_4 :RESIDENT_EVIL_5)
+
+# Individual: :RESIDENT_EVIL_5 (:RESIDENT_EVIL_5)
+
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_5 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_5 :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_5 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_5 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_5 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_5 :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_5 <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_5 :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL_5 :RESIDENT_EVIL_6)
+
+# Individual: :RESIDENT_EVIL_6 (:RESIDENT_EVIL_6)
+
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_6 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_6 :zombies_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_6 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_6 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_6 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_6 :real_time)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_6 <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_6 :RE)
+ObjectPropertyAssertion(:prequelOf :RESIDENT_EVIL_6 :RESIDENT_EVIL_7)
+
+# Individual: :RESIDENT_EVIL_7 (:RESIDENT_EVIL_7)
+
+AnnotationAssertion(rdfs:comment :RESIDENT_EVIL_7 <https://it.wikipedia.org/wiki/Resident_Evil_7:_Biohazard%20>)
+ObjectPropertyAssertion(:developedBy :RESIDENT_EVIL_7 :CAPCOM)
+ObjectPropertyAssertion(:hasContext :RESIDENT_EVIL_7 :monster_invasion)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_7 :escape)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_7 :free_shooting)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_7 :looting_based)
+ObjectPropertyAssertion(:hasGameplay :RESIDENT_EVIL_7 :real_time)
+ObjectPropertyAssertion(:hasMechanic :RESIDENT_EVIL_7 :character_development)
+ObjectPropertyAssertion(:hasPOV :RESIDENT_EVIL_7 <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+ObjectPropertyAssertion(:partOf :RESIDENT_EVIL_7 :RE)
+
+# Individual: :Red_Barrels (:Red_Barrels)
+
+AnnotationAssertion(rdfs:comment :Red_Barrels <https://it.wikipedia.org/wiki/Red_Barrels>)
+ObjectPropertyAssertion(:developerOf :Red_Barrels :OUTLAST)
+
+# Individual: :SKY_RACOON (:SKY_RACOON)
+
+ObjectPropertyAssertion(:hasGameplay :SKY_RACOON :standard_platform)
+ObjectPropertyAssertion(:hasGameplay :SKY_RACOON <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle>)
+
+# Individual: :Soap (:Soap)
+
+ObjectPropertyAssertion(:protagonistOf :Soap :CALL_OF_DUTY)
+
+# Individual: :Supermassive_Games (:Supermassive_Games)
+
+AnnotationAssertion(rdfs:comment :Supermassive_Games <https://it.wikipedia.org/wiki/Supermassive_Games>)
+ObjectPropertyAssertion(:developerOf :Supermassive_Games :UNTIL_DOWN)
+
+# Individual: :TEKKEN_7 (:TEKKEN_7)
+
+AnnotationAssertion(rdfs:comment :TEKKEN_7 <https://it.wikipedia.org/wiki/Tekken_7>)
+ObjectPropertyAssertion(:hasGameplay :TEKKEN_7 :PVP)
+ObjectPropertyAssertion(:hasGameplay :TEKKEN_7 :corpo_a_corpo)
+ObjectPropertyAssertion(:hasGameplay :TEKKEN_7 :with_matches)
+ObjectPropertyAssertion(:hasNarrative :TEKKEN_7 :simple)
+
+# Individual: :UBISOFT (:UBISOFT)
+
+AnnotationAssertion(rdfs:comment :UBISOFT <https://it.wikipedia.org/wiki/Ubisoft>)
+ObjectPropertyAssertion(:developerOf :UBISOFT <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED>)
+
+# Individual: :UNTIL_DOWN (:UNTIL_DOWN)
+
+AnnotationAssertion(rdfs:comment :UNTIL_DOWN <https://it.wikipedia.org/wiki/Until_Dawn>)
+ObjectPropertyAssertion(:hasContext :UNTIL_DOWN :paranormal)
+ObjectPropertyAssertion(:hasGameplay :UNTIL_DOWN :escape)
+ObjectPropertyAssertion(:hasGameplay :UNTIL_DOWN :exploration_narrative_tracks)
+ObjectPropertyAssertion(:hasGameplay :UNTIL_DOWN :paranormal)
+ObjectPropertyAssertion(:hasMechanic :UNTIL_DOWN :embedded_choice)
+ObjectPropertyAssertion(:hasMechanic :UNTIL_DOWN :prompted_interaction)
+ObjectPropertyAssertion(:hasPOV :UNTIL_DOWN <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+
+# Individual: :Utswo_games (:Utswo_games)
+
+AnnotationAssertion(rdfs:comment :Utswo_games <https://en.wikipedia.org/wiki/Ustwo>)
+ObjectPropertyAssertion(:developerOf :Utswo_games :MONUMENT_VALLEY_II)
+
+# Individual: :acquisition (:acquisition)
+
+ClassAssertion(:Free :acquisition)
+
+# Individual: :agonistic (:agonistic)
+
+ClassAssertion(:Sportive :agonistic)
+
+# Individual: :character_development (:character_development)
+
+ClassAssertion(:Mechanic :character_development)
+
+# Individual: :corruption (:corruption)
+
+ClassAssertion(:Grotesque :corruption)
+
+# Individual: :creation_based (:creation_based)
+
+ClassAssertion(:Simulation :creation_based)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :SandBox) :creation_based)
+
+# Individual: :creative_freedom (:creative_freedom)
+
+ClassAssertion(:Free :creative_freedom)
+
+# Individual: :dungeon_exploration (:dungeon_exploration)
+
+ClassAssertion(:Exploration :dungeon_exploration)
+
+# Individual: :embedded_choice (:embedded_choice)
+
+ClassAssertion(:Choice :embedded_choice)
+
+# Individual: :emergent (:emergent)
+
+ClassAssertion(:Emergent :emergent)
+
+# Individual: :escape (:escape)
+
+ClassAssertion(:Movement :escape)
+
+# Individual: :evocation (:evocation)
+
+ClassAssertion(:Evocative :evocation)
+
+# Individual: :exploration_based (:exploration_based)
+
+ClassAssertion(:Lore :exploration_based)
+
+# Individual: :exploration_narrative_tracks (:exploration_narrative_tracks)
+
+ClassAssertion(:Exploration :exploration_narrative_tracks)
+
+# Individual: :framed (:framed)
+
+ClassAssertion(:Framed :framed)
+
+# Individual: :free_interaction (:free_interaction)
+
+ClassAssertion(:ContextualInteraction :free_interaction)
+
+# Individual: :free_roaming (:free_roaming)
+
+ClassAssertion(:Exploration :free_roaming)
+
+# Individual: :free_shooting (:free_shooting)
+
+ClassAssertion(:Shooting :free_shooting)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :Shooter) :free_shooting)
+
+# Individual: :hidden (:hidden)
+
+ClassAssertion(:PointAndClick :hidden)
+
+# Individual: :highlight (:highlight)
+
+ClassAssertion(:PointAndClick :highlight)
+
+# Individual: :historical (:historical)
+
+ClassAssertion(:Realistic :historical)
+ClassAssertion(ObjectSomeValuesFrom(:contextOf :FPSRealistic) :historical)
+ClassAssertion(ObjectSomeValuesFrom(:contextOf :TPSRealistic) :historical)
+
+# Individual: :homely (:homely)
+
+ClassAssertion(:Familiar :homely)
+
+# Individual: :job_based (:job_based)
+
+ClassAssertion(:Simulation :job_based)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :JobSim) :job_based)
+
+# Individual: :learning (:learning)
+
+ClassAssertion(:Educative :learning)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :Educational) :learning)
+
+# Individual: :looting_based (:looting_based)
+
+ClassAssertion(:Inventory :looting_based)
+
+# Individual: :math (:math)
+
+ClassAssertion(:Educative :math)
+
+# Individual: :minigame (:minigame)
+
+ClassAssertion(:Minigames :minigame)
+
+# Individual: :mithical (:mithical)
+
+ClassAssertion(:Fantasy :mithical)
+
+# Individual: :monster_invasion (:monster_invasion)
+
+ClassAssertion(:Grotesque :monster_invasion)
+
+# Individual: :multiple_choice (:multiple_choice)
+
+ClassAssertion(:Choice :multiple_choice)
+
+# Individual: :painting (:painting)
+
+ClassAssertion(:Art :painting)
+
+# Individual: :paranormal (:paranormal)
+
+ClassAssertion(:Grotesque :paranormal)
+
+# Individual: :permanent_death (:permanent_death)
+
+ClassAssertion(:Mechanic :permanent_death)
+
+# Individual: :post_apocaliptic (:post_apocaliptic)
+
+ClassAssertion(:Fantasy :post_apocaliptic)
+
+# Individual: :prompted_interaction (:prompted_interaction)
+
+ClassAssertion(:ContextualInteraction :prompted_interaction)
+
+# Individual: :psychological (:psychological)
+
+ClassAssertion(:Grotesque :psychological)
+
+# Individual: :real_time (:real_time)
+
+ClassAssertion(:Malee :real_time)
+
+# Individual: :real_time_strategy (:real_time_strategy)
+
+ClassAssertion(:Strategy :real_time_strategy)
+
+# Individual: :romance_based (:romance_based)
+
+ClassAssertion(:Simulation :romance_based)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :DatingSim) :romance_based)
+
+# Individual: :side_scrolling (:side_scrolling)
+
+ClassAssertion(:Isometric :side_scrolling)
+
+# Individual: :simple (:simple)
+
+ClassAssertion(:Simple :simple)
+
+# Individual: :space_wars (:space_wars)
+
+ClassAssertion(:Familiar :space_wars)
+ClassAssertion(ObjectSomeValuesFrom(:contextOf :FPSFantasy) :space_wars)
+ClassAssertion(ObjectSomeValuesFrom(:contextOf :TPSFantasy) :space_wars)
+
+# Individual: :standard_isometrics (:standard_isometrics)
+
+ClassAssertion(:Isometric :standard_isometrics)
+
+# Individual: :standard_platform (:standard_platform)
+
+ClassAssertion(:Movement :standard_platform)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :Platformer) :standard_platform)
+
+# Individual: :standard_stealth (:standard_stealth)
+
+ClassAssertion(:Movement :standard_stealth)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :Stealth) :standard_stealth)
+
+# Individual: :standard_textual (:standard_textual)
+
+ClassAssertion(:Textual :standard_textual)
+
+# Individual: :turn_based (:turn_based)
+
+ClassAssertion(:Malee :turn_based)
+
+# Individual: :unlockable (:unlockable)
+
+ClassAssertion(:Inventory :unlockable)
+
+# Individual: :urban (:urban)
+
+ClassAssertion(:Familiar :urban)
+
+# Individual: :value_based (:value_based)
+
+ClassAssertion(:Simulation :value_based)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :Management) :value_based)
+
+# Individual: :vehicle_based (:vehicle_based)
+
+ClassAssertion(:Simulation :vehicle_based)
+ClassAssertion(ObjectSomeValuesFrom(:gameplayOf :DrivingSim) :vehicle_based)
+
+# Individual: :walltext (:walltext)
+
+ClassAssertion(:POV :walltext)
+
+# Individual: :war (:war)
+
+ClassAssertion(:Realistic :war)
+ClassAssertion(ObjectSomeValuesFrom(:contextOf :FPSRealistic) :war)
+ClassAssertion(ObjectSomeValuesFrom(:contextOf :TPSRealistic) :war)
+
+# Individual: :with_matches (:with_matches)
+
+ClassAssertion(:Malee :with_matches)
+
+# Individual: :with_teams (:with_teams)
+
+ClassAssertion(:Malee :with_teams)
+
+# Individual: :zombies_invasion (:zombies_invasion)
+
+ClassAssertion(:Grotesque :zombies_invasion)
+
+# Individual: <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P> (<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+
+ClassAssertion(ObjectSomeValuesFrom(:POVOf :FPS) <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+ClassAssertion(ObjectSomeValuesFrom(:POVOf :FPSFantasy) <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+ClassAssertion(ObjectSomeValuesFrom(:POVOf :FPSRealistic) <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P>)
+
+# Individual: <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle> (<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle>)
+
+ClassAssertion(:Puzzle <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#2D_puzzle>)
+
+# Individual: <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle> (<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle>)
+
+ClassAssertion(:Puzzle <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3D_puzzle>)
+
+# Individual: <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P> (<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+
+
+# Individual: <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> (<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> <https://it.wikipedia.org/wiki/Assassin%27s_Creed>)
+ObjectPropertyAssertion(:compatibleWith <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :PS3)
+ObjectPropertyAssertion(:compatibleWith <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :XBOX_360)
+ObjectPropertyAssertion(:hasContext <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :historical)
+ObjectPropertyAssertion(:hasGameplay <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :OpenWorld)
+ObjectPropertyAssertion(:hasGameplay <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :exploration_narrative_tracks)
+ObjectPropertyAssertion(:hasGameplay <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :real_time)
+ObjectPropertyAssertion(:hasGameplay <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :standard_stealth)
+ObjectPropertyAssertion(:hasMechanic <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :Item_description_based)
+ObjectPropertyAssertion(:hasNarrative <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#ASSASSIN'SCREED> :simple)
+
+
+DifferentIndividuals(<http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#1P> <http://www.semanticweb.org/porta/ontologies/2022/5/untitled-ontology-7#3P>)
+)
