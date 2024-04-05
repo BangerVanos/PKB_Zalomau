@@ -49,7 +49,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://w
 PREFIX GameOnt: <http://www.semanticweb.org/user/ontologies/2024/3/psg_projects_ontology#>
 SELECT ?Game ?Feature WHERE {
 	?Game GameOnt:has_feature ?Feature.
+	FILTER (?Feature = GameOnt: Shooting).
 }
-FILTER (?Feature = GameOnt: Shooting).
 ORDER BY ?Game
 

@@ -21,7 +21,7 @@
         <Literal>0.0.1</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#Battle_Mechanic"/>
+        <Class IRI="#Battle_Mechanics"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Console_Platform"/>
@@ -42,13 +42,13 @@
         <Class IRI="#Game_Engine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Game_Feature"/>
+        <Class IRI="#Game_Features"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Game_Genre"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Game_Mechanic"/>
+        <Class IRI="#Game_Mechanics"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Game_Project"/>
@@ -72,7 +72,7 @@
         <Class IRI="#Model"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Movement_Mechanic"/>
+        <Class IRI="#Movement_Mechanics"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Platform"/>
@@ -84,7 +84,7 @@
         <Class IRI="#Project_Asset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Project_Feature"/>
+        <Class IRI="#Project_Features"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RPG"/>
@@ -118,12 +118,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#has_feature"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_feature_of"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_game_genre_of"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#platform"/>
@@ -276,8 +270,8 @@
         <Class IRI="#Role-Playing_Game"/>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="#Battle_Mechanic"/>
-        <Class IRI="#Game_Mechanic"/>
+        <Class IRI="#Battle_Mechanics"/>
+        <Class IRI="#Game_Mechanics"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Console_Platform"/>
@@ -304,12 +298,12 @@
         <Class IRI="#Gamedev_Tool_Project"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Game_Feature"/>
-        <Class IRI="#Project_Feature"/>
+        <Class IRI="#Game_Features"/>
+        <Class IRI="#Project_Features"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Game_Mechanic"/>
-        <Class IRI="#Game_Feature"/>
+        <Class IRI="#Game_Mechanics"/>
+        <Class IRI="#Game_Features"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Game_Project"/>
@@ -329,7 +323,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Graphics_Style"/>
-        <Class IRI="#Game_Feature"/>
+        <Class IRI="#Game_Features"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mobile_Platform"/>
@@ -340,8 +334,8 @@
         <Class IRI="#Game_Asset"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Movement_Mechanic"/>
-        <Class IRI="#Game_Mechanic"/>
+        <Class IRI="#Movement_Mechanics"/>
+        <Class IRI="#Game_Mechanics"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RPG"/>
@@ -353,7 +347,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Setting"/>
-        <Class IRI="#Game_Feature"/>
+        <Class IRI="#Game_Features"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Shooter"/>
@@ -365,11 +359,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tool_Features"/>
-        <Class IRI="#Project_Feature"/>
+        <Class IRI="#Project_Features"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Vehicle_Mechanic"/>
-        <Class IRI="#Movement_Mechanic"/>
+        <Class IRI="#Movement_Mechanics"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#3D_Graphics"/>
@@ -440,7 +434,7 @@
         <NamedIndividual IRI="#Low_Poly_Style"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Battle_Mechanic"/>
+        <Class IRI="#Battle_Mechanics"/>
         <NamedIndividual IRI="#Melee"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -496,7 +490,7 @@
         <NamedIndividual IRI="#Sandbox_RPG"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Battle_Mechanic"/>
+        <Class IRI="#Battle_Mechanics"/>
         <NamedIndividual IRI="#Shooting"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -703,14 +697,6 @@
         <NamedIndividual IRI="#Windows"/>
         <Literal>11</Literal>
     </DataPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#game_genre"/>
-        <ObjectProperty IRI="#is_game_genre_of"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#has_feature"/>
-        <ObjectProperty IRI="#is_feature_of"/>
-    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#game_genre"/>
         <Class IRI="#Game_Project"/>
@@ -718,14 +704,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#has_feature"/>
         <Class IRI="#Project"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_feature_of"/>
-        <Class IRI="#Project_Feature"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_game_genre_of"/>
-        <Class IRI="#Game_Genre"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#platform"/>
@@ -741,15 +719,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#has_feature"/>
-        <Class IRI="#Project_Feature"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_feature_of"/>
-        <Class IRI="#Project"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_game_genre_of"/>
-        <Class IRI="#Game_Project"/>
+        <Class IRI="#Project_Features"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#platform"/>
@@ -759,12 +729,6 @@
         <ObjectProperty IRI="#project_asset"/>
         <Class IRI="#Project_Asset"/>
     </ObjectPropertyRange>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#development_start_date"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#release_date"/>
-    </FunctionalDataProperty>
     <DataPropertyDomain>
         <DataProperty IRI="#development_start_date"/>
         <Class IRI="#Project"/>
