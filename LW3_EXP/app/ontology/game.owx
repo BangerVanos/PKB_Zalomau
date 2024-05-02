@@ -1,0 +1,1182 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/4/text_warriors_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2024/4/text_warriors_ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/user/ontologies/2024/4/text_warriors_ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Yep, that&apos;s ontology of a game, containing some its basic values + players&apos; profiles</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Text Warriors ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>0.0.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Armor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Character"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CharacterClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Firearm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealingItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeavyArmor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightArmor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagicWeapon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeduimArmor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Melee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shooter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Warrior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weapon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#character_class"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#character_class_property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#character_property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#equipped_armor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#equipped_weapon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#item_of_inv"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#item_property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#start_armor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#start_weapon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#used_only_by"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ap"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ap_coeff"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ap_cost"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#armor_protection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#base_ap"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#base_hp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#character_stat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#class_stat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#exp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hp_coeff"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_consumable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#item_stat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lvl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#restored_hp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weapon_accuracy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weapon_damage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#armor_reaper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#armor_stealth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#armor_x02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hp_kit_big"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hp_kit_small"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#knight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#machine_gunner"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#necromant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#paladin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sniper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_as50"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_m16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_m2010"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_m249"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_m99"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_mg3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weapon_pkm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#wizard"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Armor"/>
+        <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Firearm"/>
+        <Class IRI="#Weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealingItem"/>
+        <Class IRI="#Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeavyArmor"/>
+        <Class IRI="#Armor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LightArmor"/>
+        <Class IRI="#Armor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mage"/>
+        <Class IRI="#CharacterClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MagicWeapon"/>
+        <Class IRI="#Weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeduimArmor"/>
+        <Class IRI="#Armor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Melee"/>
+        <Class IRI="#Weapon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shooter"/>
+        <Class IRI="#CharacterClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Warrior"/>
+        <Class IRI="#CharacterClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weapon"/>
+        <Class IRI="#Item"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Armor"/>
+        <Class IRI="#HealingItem"/>
+        <Class IRI="#Weapon"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HeavyArmor"/>
+        <Class IRI="#LightArmor"/>
+        <Class IRI="#MeduimArmor"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Mage"/>
+        <Class IRI="#Shooter"/>
+        <Class IRI="#Warrior"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#MeduimArmor"/>
+        <NamedIndividual IRI="#armor_reaper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LightArmor"/>
+        <NamedIndividual IRI="#armor_stealth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HeavyArmor"/>
+        <NamedIndividual IRI="#armor_x02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HealingItem"/>
+        <NamedIndividual IRI="#hp_kit_big"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HealingItem"/>
+        <NamedIndividual IRI="#hp_kit_small"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Warrior"/>
+        <NamedIndividual IRI="#knight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shooter"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mage"/>
+        <NamedIndividual IRI="#necromant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Warrior"/>
+        <NamedIndividual IRI="#paladin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shooter"/>
+        <NamedIndividual IRI="#sniper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_as50"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_m2010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_m249"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_mg3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Firearm"/>
+        <NamedIndividual IRI="#weapon_pkm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mage"/>
+        <NamedIndividual IRI="#wizard"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#start_armor"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+        <NamedIndividual IRI="#armor_reaper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#start_weapon"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#start_armor"/>
+        <NamedIndividual IRI="#sniper"/>
+        <NamedIndividual IRI="#armor_stealth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#start_weapon"/>
+        <NamedIndividual IRI="#sniper"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_as50"/>
+        <NamedIndividual IRI="#sniper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_m2010"/>
+        <NamedIndividual IRI="#sniper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_m249"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+        <NamedIndividual IRI="#sniper"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_mg3"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#used_only_by"/>
+        <NamedIndividual IRI="#weapon_pkm"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#armor_protection"/>
+        <NamedIndividual IRI="#armor_reaper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#armor_reaper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#armor_protection"/>
+        <NamedIndividual IRI="#armor_stealth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#armor_stealth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#armor_protection"/>
+        <NamedIndividual IRI="#armor_x02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#armor_x02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#hp_kit_big"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restored_hp"/>
+        <NamedIndividual IRI="#hp_kit_big"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#hp_kit_small"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restored_hp"/>
+        <NamedIndividual IRI="#hp_kit_small"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_coeff"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#base_ap"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#base_hp"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp_coeff"/>
+        <NamedIndividual IRI="#machine_gunner"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_coeff"/>
+        <NamedIndividual IRI="#sniper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#base_ap"/>
+        <NamedIndividual IRI="#sniper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#base_hp"/>
+        <NamedIndividual IRI="#sniper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hp_coeff"/>
+        <NamedIndividual IRI="#sniper"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_as50"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">125</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_as50"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_as50"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_as50"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_m16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_m2010"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_m2010"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_m2010"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_m2010"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">175</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_m249"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_m249"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_m249"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_m249"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">27</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">115</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">87</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_m99"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">225</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_mg3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_mg3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_mg3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">54</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_mg3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ap_cost"/>
+        <NamedIndividual IRI="#weapon_pkm"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#is_consumable"/>
+        <NamedIndividual IRI="#weapon_pkm"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <NamedIndividual IRI="#weapon_pkm"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weapon_damage"/>
+        <NamedIndividual IRI="#weapon_pkm"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#character_class"/>
+        <ObjectProperty IRI="#character_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#equipped_armor"/>
+        <ObjectProperty IRI="#character_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#equipped_weapon"/>
+        <ObjectProperty IRI="#character_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#item_of_inv"/>
+        <ObjectProperty IRI="#character_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#start_armor"/>
+        <ObjectProperty IRI="#character_class_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#start_weapon"/>
+        <ObjectProperty IRI="#character_class_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#used_only_by"/>
+        <ObjectProperty IRI="#item_property"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#character_class"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#equipped_armor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#equipped_weapon"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#start_armor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#start_weapon"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#character_class_property"/>
+        <Class IRI="#CharacterClass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#character_property"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#item_property"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#character_class"/>
+        <Class IRI="#CharacterClass"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equipped_armor"/>
+        <Class IRI="#Armor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#equipped_weapon"/>
+        <Class IRI="#Weapon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#item_of_inv"/>
+        <Class IRI="#Item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#start_armor"/>
+        <Class IRI="#Armor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#start_weapon"/>
+        <Class IRI="#Weapon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#used_only_by"/>
+        <Class IRI="#CharacterClass"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#ap"/>
+        <DataProperty IRI="#character_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#ap_coeff"/>
+        <DataProperty IRI="#class_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#ap_cost"/>
+        <DataProperty IRI="#item_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#armor_protection"/>
+        <DataProperty IRI="#item_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#base_ap"/>
+        <DataProperty IRI="#class_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#base_hp"/>
+        <DataProperty IRI="#class_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#exp"/>
+        <DataProperty IRI="#character_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hp"/>
+        <DataProperty IRI="#character_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hp_coeff"/>
+        <DataProperty IRI="#class_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#is_consumable"/>
+        <DataProperty IRI="#item_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#lvl"/>
+        <DataProperty IRI="#character_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#restored_hp"/>
+        <DataProperty IRI="#item_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <DataProperty IRI="#item_stat"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#weapon_damage"/>
+        <DataProperty IRI="#item_stat"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ap"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ap_coeff"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#armor_protection"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#base_ap"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#base_hp"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#exp"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hp"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hp_coeff"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#is_consumable"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#lvl"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#restored_hp"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#weapon_accuracy"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#weapon_damage"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ap_cost"/>
+        <Class IRI="#Weapon"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#armor_protection"/>
+        <Class IRI="#Armor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#character_stat"/>
+        <Class IRI="#Character"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#class_stat"/>
+        <Class IRI="#CharacterClass"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#item_stat"/>
+        <Class IRI="#Item"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#restored_hp"/>
+        <Class IRI="#HealingItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <Class IRI="#Weapon"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weapon_damage"/>
+        <Class IRI="#Weapon"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#ap_coeff"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ap_cost"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#armor_protection"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#base_ap"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#base_hp"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#exp"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hp"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hp_coeff"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_consumable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#lvl"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#restored_hp"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#weapon_accuracy"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#weapon_damage"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ap</IRI>
+        <Literal>Action Points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ap_coeff</IRI>
+        <Literal>AP Coefficient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ap_cost</IRI>
+        <Literal>Action Points Cost</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#armor_protection</IRI>
+        <Literal>Armor Protection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#armor_reaper</IRI>
+        <Literal>https://i.pinimg.com/originals/79/ac/27/79ac27fda6c58653f2a1b918bfdfc6cc.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#armor_reaper</IRI>
+        <Literal>Reaper Medium Armor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#armor_stealth</IRI>
+        <Literal>https://images.fallout.wiki/thumb/e/e6/Chinese_stealth_armor.png/1200px-Chinese_stealth_armor.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#armor_stealth</IRI>
+        <Literal>Stealth Light Armor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#armor_x02</IRI>
+        <Literal>https://i.redd.it/qky53oe2e3s71.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#armor_x02</IRI>
+        <Literal>X-02 Heavy Armor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#base_ap</IRI>
+        <Literal>Base Action Points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#base_hp</IRI>
+        <Literal>Basic Health Points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#character_class</IRI>
+        <Literal>Character Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#character_class_property</IRI>
+        <Literal>Character Class Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#character_property</IRI>
+        <Literal>Character Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#character_stat</IRI>
+        <Literal>Character Stat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#class_stat</IRI>
+        <Literal>Character Class Stat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#equipped_armor</IRI>
+        <Literal>Equipped Armor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#equipped_weapon</IRI>
+        <Literal>Equipped Weapon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#exp</IRI>
+        <Literal>Experience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hp</IRI>
+        <Literal>Health Points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hp_coeff</IRI>
+        <Literal>HP Coefficient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#hp_kit_big</IRI>
+        <Literal>https://www.pngall.com/wp-content/uploads/4/First-Aid-Kit-PNG-Image-File.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hp_kit_big</IRI>
+        <Literal>First Aid Kit (Big)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#hp_kit_small</IRI>
+        <Literal>https://pngimg.com/d/first_aid_kit_PNG43.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hp_kit_small</IRI>
+        <Literal>First Aid Kit (Small)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_consumable</IRI>
+        <Literal>Consumable?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#item_of_inv</IRI>
+        <Literal>Item of inventory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#item_property</IRI>
+        <Literal>Item Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#item_stat</IRI>
+        <Literal>Item Stat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#knight</IRI>
+        <Literal>Knight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lvl</IRI>
+        <Literal>Level</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#machine_gunner</IRI>
+        <Literal>Machine Gunner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#necromant</IRI>
+        <Literal>Necromant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#paladin</IRI>
+        <Literal>Paladin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#restored_hp</IRI>
+        <Literal>Restored HP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sniper</IRI>
+        <Literal>Sniper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#start_armor</IRI>
+        <Literal>Start Armor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#start_weapon</IRI>
+        <Literal>Start Weapon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#used_only_by</IRI>
+        <Literal>Used only by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_accuracy</IRI>
+        <Literal>Weapon Accuracy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_as50</IRI>
+        <Literal>https://wf.cdn.gmru.net/wiki/images/7/71/Sr04.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_as50</IRI>
+        <Literal>AS50</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_damage</IRI>
+        <Literal>Weapon Damage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_m16</IRI>
+        <Literal>https://pngimg.com/d/assault_rifle_PNG1436.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_m16</IRI>
+        <Literal>M16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_m2010</IRI>
+        <Literal>https://images.free3d.com/imgd/l42427-m2010-esr-1338.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_m2010</IRI>
+        <Literal>M2010 Enhanced Sniper Rifle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_m249</IRI>
+        <Literal>https://liquipedia.net/commons/images/3/36/M249_new.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_m249</IRI>
+        <Literal>M249</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_m99</IRI>
+        <Literal>https://www.gruenel.ch/includes/Navision/Images/ART/06_/oxFP-637226261888038756_06_6491_10_big_lang.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_m99</IRI>
+        <Literal>Barret M99</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_mg3</IRI>
+        <Literal>https://upload.wikimedia.org/wikipedia/commons/e/ee/BundeswehrMG3_noBG.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_mg3</IRI>
+        <Literal>MG3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://schema.org/image"/>
+        <IRI>#weapon_pkm</IRI>
+        <Literal>https://pngimg.com/d/machine_gun_PNG27.png</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#weapon_pkm</IRI>
+        <Literal>PKM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#wizard</IRI>
+        <Literal>Wizard</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
