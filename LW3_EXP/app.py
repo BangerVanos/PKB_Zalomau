@@ -23,8 +23,7 @@ class WelcomeView:
         )
 
     def run(self) -> None:        
-        fetcher = JSONFetcher()
-        st.write(fetcher.fetch_all_characters())
+        st.info('# Welcome to game!')
 
 
 view = WelcomeView()

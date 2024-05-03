@@ -13,7 +13,7 @@ class IndividualCreator:
         if fetcher is None:
             self._fetcher = Fetcher(onto)
     
-    def create_new_character(self, class_uri: str):
+    def create_new_character(self, class_uri: str, save: bool = True):
         new_character = self._onto.Character()
         character_class = self._fetcher.fetch_by_uri(class_uri)
 
@@ -31,8 +31,9 @@ class IndividualCreator:
         new_character.hp = character_class.base_hp
         new_character.exp = 0
 
-        # Saving to ontology
-        SaveOntology.save(self._onto)        
+        if save:
+            # Saving to ontology
+            SaveOntology.save(self._onto)        
 
         return new_character
     

@@ -52,6 +52,7 @@ class SelectCharacterView:
             )
             if select_btn:
                 st.session_state['selected_character'] = uri
+                st.session_state['player'] = None
             if delete_btn:
                 st.session_state['selected_character'] = None
                 self._creator.destroy_individual(uri)
@@ -78,6 +79,7 @@ class SelectCharacterView:
     
     def _create_new_character(self, uri: str) -> None:
         st.session_state['selected_character'] = uri
+        st.session_state['player'] = None
         self._creator.create_new_character(uri)
               
 

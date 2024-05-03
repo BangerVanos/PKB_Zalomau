@@ -1,6 +1,7 @@
 import owlready2 as owl
 from app.backend.fetch_from_onto import Fetcher, JSONFetcher
 from enum import StrEnum
+from math import log, floor
 
 
 class Player:
@@ -14,43 +15,54 @@ class Player:
         self._json = JSONFetcher(self._fetcher)
         self._character = self._fetcher.fetch_by_uri(character_uri)
 
-    def item_use(self, ind: int, uri: str):
+    def item_use(self, ind: int, uri: str) -> None | str:
         item = self._fetcher.fetch_by_uri(uri)
         if self._is_item_usable(item):
-            self._apply_item(item, ind)
+            event = self._apply_item(item, ind)
+        else:
+            event = f'Can\' use item: {item.label[0]}'
+        return event
 
     def _is_item_usable(self, item) -> bool:
         if len(item.used_only_by) == 0:
             return True
         return self._character.character_class in item.used_only_by
 
-    def _apply_item(self, item, ind) -> None:
+    def _apply_item(self, item, ind) -> None | str:
         item_class = item.is_a[0].name
         if item_class == 'Firearm':
-            self._apply_weapon(item)
+            event = self._apply_weapon(item)
         elif 'Armor' in item_class:
-            self._apply_armor(item)
+            event = self._apply_armor(item)
         elif item_class == 'HealingItem':
-            self._apply_heal(item, ind)
+            event = self._apply_heal(item, ind)
+        return event
 
-    def _apply_weapon(self, weapon) -> None:
+    def _apply_weapon(self, weapon) -> None | str:
         self._character.equipped_weapon = weapon
+        return f'Equipped {weapon.label[0]}'
 
-    def _apply_armor(self, armor) -> None:
+    def _apply_armor(self, armor) -> None | str:
         self._character.equipped_armor = armor
+        return f'Equipped {armor.label[0]}'
 
-    def _apply_heal(self, heal, ind: int) -> None:
+    def _apply_heal(self, heal, ind: int) -> None | str:
         if self._character.hp == self.max_hp:
-            return
+            return 'Your HP is full!'
+        old_hp = self._character.hp
         self._character.hp += round(
             self.max_hp * heal.restored_hp / 100
         )
+        self._character.hp = min(self.max_hp, self._character.hp)
         self._character.item_of_inv.pop(ind)
+        return f'Successfully restored {self._character.hp - old_hp} HP!'
 
     def take_damage(self, damage: int) -> None:
-        self._character.hp = min(0, self._character.hp - damage)
+        self._character.hp = int(
+            max(0, self._character.hp - damage)
+        )
 
-    def use_ap(self, ap_amount: int) -> bool:
+    def use_ap(self, ap_amount: int) -> bool:                      
         if self._character.ap < ap_amount:
             return False
         else:
@@ -58,7 +70,40 @@ class Player:
             return True
 
     def add_item(self, item) -> None:
-        self._character.item_of_inv.append(item)              
+        self._character.item_of_inv.append(item)
+
+    def add_xp(self, xp: int) -> None:
+        self._character.exp += xp
+        self._count_lvl()
+
+    def _count_lvl(self) -> None:
+        lvl_q = 1.5
+        base_xp = 100
+        self._character.lvl = log(self._character.exp * (lvl_q - 1) / 
+                                  base_xp + 1, lvl_q)
+
+    def restore_ap(self) -> None:
+        self._character.ap = int(
+            min(self.max_ap, self._character.ap + int(0.25 * self.max_ap))
+        )
+
+    def die(self) -> None:
+        '''If you die, you just roll back to start stats'''
+        self._character.xp = 0
+        self._character.lvl = 1
+        self._character.exp = 0
+
+        # Class-based-stats
+        character_class = self._character.character_class
+        self._character.equipped_weapon = character_class.start_weapon
+        self._character.equipped_armor = character_class.start_armor
+
+        self._character.ap = character_class.base_ap
+        self._character.hp = character_class.base_hp
+
+        self._character.item_of_inv = [character_class.start_weapon,
+                                       character_class.start_armor,
+                                       self._onto.hp_kit_small]          
     
     @property
     def character_json(self) -> dict:
