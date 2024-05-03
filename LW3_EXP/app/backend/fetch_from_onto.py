@@ -8,6 +8,8 @@ class Fetcher:
     def __init__(self, onto: owl.Ontology | None = None) -> None:
         if onto is None:
             self._onto = LoadOntology.load()
+        else:
+            self._onto = onto
     
     def fetch_all_onto_classes(self) -> tuple[owl.ThingClass]:
         return tuple(self._onto.classes())
@@ -31,16 +33,23 @@ class JSONFetcher:
     def __init__(self, fetcher: Fetcher | None = None) -> None:
         if fetcher is None:
             self._fetcher = Fetcher()
+        else:
+            self._fetcher = fetcher
+    
+    def fetch_by_instance(self, instance) -> dict:
+        props = {prop.name: (prop[instance][0] if isinstance(prop, owl.FunctionalProperty)
+                 else prop[instance]) for prop in instance.get_properties()}
+        props['uri'] = str(instance)
+        return props
     
     def fetch_by_uri(self, uri: str):
         inst = self._fetcher.fetch_by_uri(uri)
-        props = {prop.name: (prop[inst][0] if isinstance(prop, owl.FunctionalProperty)
-                 else prop[inst]) for prop in inst.get_properties()}
+        props = self.fetch_by_instance(inst)
         props['uri'] = uri          
         return props
 
     def fetch_instances(self, instances: Iterable) -> list[dict]:
-        return [self.fetch_by_uri(str(inst))
+        return [self.fetch_by_instance(inst)
                 for inst in instances]
     
     def fetch_all_character_classes(self) -> list[dict]:

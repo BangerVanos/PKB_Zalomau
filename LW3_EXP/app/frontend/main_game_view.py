@@ -1,5 +1,6 @@
 import streamlit as st
 from app.backend.fetch_from_onto import JSONFetcher
+from app.glue.player import Player
 from streamlit_extras.card import card
 from streamlit_extras.row import row
 
@@ -18,13 +19,13 @@ class MainGameView:
             
     
     def _load_main_game(self, uri: str) -> None:
-        character = self._fetcher.fetch_by_uri(uri)        
+        player = Player(uri)        
 
         stat_cols = st.columns([1, 1, 2])
 
         # Fetching player stats
-        armor = self._fetcher.fetch_by_uri(str(character['equipped_armor'][0]))
-        weapon = self._fetcher.fetch_by_uri(str(character['equipped_weapon'][0]))
+        armor = player.armor
+        weapon = player.weapon
 
         armor_img = armor['image'][0]
         weapon_img = weapon['image'][0]
@@ -37,40 +38,44 @@ class MainGameView:
                      caption=[armor_label, weapon_label],
                      use_column_width=True)
             stat_row = row(4)
-            stat_row.metric(label='HP', value=character['hp'][0])
-            stat_row.metric(label='AP', value=character['ap'][0])
-            stat_row.metric(label='LVL', value=character['lvl'][0])
-            stat_row.metric(label='XP', value=character['exp'][0])
+            stat_row.metric(label='HP', value=player.hp)
+            stat_row.metric(label='AP', value=player.ap)
+            stat_row.metric(label='LVL', value=player.lvl)
+            stat_row.metric(label='XP', value=player.xp)
         with stat_cols[1]:
             st.write('### Enemy stats')
         with stat_cols[2]:
             st.write('### Events')
             self._event_placeholder = st.container(border=True)
         st.write('## My Inventory')
-        self._render_inventory(character)
+        self._render_inventory(player)
     
     def _new_event(self, placeholder, event: str):
         with placeholder:
             st.write(event)
             st.divider()
     
-    def _render_inventory(self, character: dict) -> None:
-        inv = character['item_of_inv']
+    def _render_inventory(self, player: Player) -> None:
+        inv = player.inv
         inv_row = st.columns(len(inv))
-        for ind, item_uri in enumerate(inv):
-            item = self._fetcher.fetch_by_uri(str(item_uri))
+        for ind, item in enumerate(inv):            
             with inv_row[ind]:
                 card(
                     title=item['label'][0],
                     image=item['image'][0],
                     text=item['label'][0],
-                    on_click=(lambda ind=ind, uri=item_uri,
-                            item=item: self._handle_item_click(ind, uri, item))
+                    on_click=(lambda ind=ind, uri=item['uri'],
+                              item=item: self._handle_item_click(ind, uri, item,
+                                                                 player)),
+                    key=f'item_{ind}'
                 )            
     
-    def _handle_item_click(self, ind: int, uri: str, item: dict) -> None:
+    def _handle_item_click(self, ind: int, uri: str, item: dict,
+                           player: Player) -> None:
         self._new_event(self._event_placeholder,
-                        f'Tried to use: {item['label'][0]}')        
+                        f'Tried to use: {item['label'][0]}')
+        print(f'Used item with uri: {uri}')
+        player.item_use(ind, uri)      
 
 
 view = MainGameView()

@@ -1,5 +1,6 @@
 import owlready2 as owl
 from app.backend.load_ontology import LoadOntology
+from app.backend.load_ontology import SaveOntology
 from app.backend.fetch_from_onto import Fetcher
 
 
@@ -30,8 +31,8 @@ class IndividualCreator:
         new_character.hp = character_class.base_hp
         new_character.exp = 0
 
-        # # Saving to ontology
-        # self._onto.save()
+        # Saving to ontology
+        SaveOntology.save(self._onto)        
 
         return new_character
     

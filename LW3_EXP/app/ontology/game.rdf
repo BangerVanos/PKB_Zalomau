@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/user/ontologies/2024/4/text_warriors_ontology"
+         xmlns="http://www.semanticweb.org/user/ontologies/2024/4/text_warriors_ontology#"
+         xmlns:sche="http://schema.org/">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/text_warriors_ontology">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yep, that's ontology of a game, containing some its basic values + players' profiles</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text Warriors ontology</rdfs:label>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.1</owl:versionInfo>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#character_class">
+  <rdfs:subPropertyOf rdf:resource="#character_property"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="#CharacterClass"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character Class</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#character_property">
+  <rdfs:domain rdf:resource="#Character"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character Property</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#character_class_property">
+  <rdfs:domain rdf:resource="#CharacterClass"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character Class Property</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#equipped_armor">
+  <rdfs:subPropertyOf rdf:resource="#character_property"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="#Armor"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipped Armor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#equipped_weapon">
+  <rdfs:subPropertyOf rdf:resource="#character_property"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="#Weapon"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipped Weapon</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#item_of_inv">
+  <rdfs:subPropertyOf rdf:resource="#character_property"/>
+  <rdfs:range rdf:resource="#Item"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item of inventory</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#item_property">
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item Property</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#start_armor">
+  <rdfs:subPropertyOf rdf:resource="#character_class_property"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="#Armor"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start Armor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#start_weapon">
+  <rdfs:subPropertyOf rdf:resource="#character_class_property"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="#Weapon"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start Weapon</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#used_only_by">
+  <rdfs:subPropertyOf rdf:resource="#item_property"/>
+  <rdfs:range rdf:resource="#CharacterClass"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used only by</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#ap">
+  <rdfs:subPropertyOf rdf:resource="#character_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action Points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#character_stat">
+  <rdfs:domain rdf:resource="#Character"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character Stat</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#ap_coeff">
+  <rdfs:subPropertyOf rdf:resource="#class_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AP Coefficient</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#class_stat">
+  <rdfs:domain rdf:resource="#CharacterClass"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character Class Stat</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#ap_cost">
+  <rdfs:subPropertyOf rdf:resource="#item_stat"/>
+  <rdfs:domain rdf:resource="#Weapon"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action Points Cost</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#item_stat">
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item Stat</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#armor_protection">
+  <rdfs:subPropertyOf rdf:resource="#item_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Armor"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armor Protection</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#base_ap">
+  <rdfs:subPropertyOf rdf:resource="#class_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base Action Points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#base_hp">
+  <rdfs:subPropertyOf rdf:resource="#class_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Health Points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#exp">
+  <rdfs:subPropertyOf rdf:resource="#character_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experience</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hp">
+  <rdfs:subPropertyOf rdf:resource="#character_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health Points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hp_coeff">
+  <rdfs:subPropertyOf rdf:resource="#class_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP Coefficient</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#is_consumable">
+  <rdfs:subPropertyOf rdf:resource="#item_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consumable?</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#lvl">
+  <rdfs:subPropertyOf rdf:resource="#character_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#restored_hp">
+  <rdfs:subPropertyOf rdf:resource="#item_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#HealingItem"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restored HP</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#weapon_accuracy">
+  <rdfs:subPropertyOf rdf:resource="#item_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Weapon"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weapon Accuracy</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#weapon_damage">
+  <rdfs:subPropertyOf rdf:resource="#item_stat"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Weapon"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weapon Damage</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://schema.org/image"/>
+
+<owl:Class rdf:about="#CharacterClass"/>
+
+<owl:Class rdf:about="#Character"/>
+
+<owl:Class rdf:about="#Armor">
+  <rdfs:subClassOf rdf:resource="#Item"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Weapon">
+  <rdfs:subClassOf rdf:resource="#Item"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Item"/>
+
+<owl:Class rdf:about="#HealingItem">
+  <rdfs:subClassOf rdf:resource="#Item"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Firearm">
+  <rdfs:subClassOf rdf:resource="#Weapon"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HeavyArmor">
+  <rdfs:subClassOf rdf:resource="#Armor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightArmor">
+  <rdfs:subClassOf rdf:resource="#Armor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mage">
+  <rdfs:subClassOf rdf:resource="#CharacterClass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MagicWeapon">
+  <rdfs:subClassOf rdf:resource="#Weapon"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MeduimArmor">
+  <rdfs:subClassOf rdf:resource="#Armor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Melee">
+  <rdfs:subClassOf rdf:resource="#Weapon"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Shooter">
+  <rdfs:subClassOf rdf:resource="#CharacterClass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Warrior">
+  <rdfs:subClassOf rdf:resource="#CharacterClass"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#armor_reaper">
+  <rdf:type rdf:resource="#MeduimArmor"/>
+  <armor_protection rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55.0</armor_protection>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.pinimg.com/originals/79/ac/27/79ac27fda6c58653f2a1b918bfdfc6cc.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaper Medium Armor</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#armor_stealth">
+  <rdf:type rdf:resource="#LightArmor"/>
+  <armor_protection rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.0</armor_protection>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://images.fallout.wiki/thumb/e/e6/Chinese_stealth_armor.png/1200px-Chinese_stealth_armor.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stealth Light Armor</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#armor_x02">
+  <rdf:type rdf:resource="#HeavyArmor"/>
+  <armor_protection rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</armor_protection>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.redd.it/qky53oe2e3s71.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-02 Heavy Armor</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#hp_kit_big">
+  <rdf:type rdf:resource="#HealingItem"/>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_consumable>
+  <restored_hp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">75</restored_hp>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.pngall.com/wp-content/uploads/4/First-Aid-Kit-PNG-Image-File.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First Aid Kit (Big)</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#hp_kit_small">
+  <rdf:type rdf:resource="#HealingItem"/>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_consumable>
+  <restored_hp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</restored_hp>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pngimg.com/d/first_aid_kit_PNG43.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First Aid Kit (Small)</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#knight">
+  <rdf:type rdf:resource="#Warrior"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knight</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#machine_gunner">
+  <rdf:type rdf:resource="#Shooter"/>
+  <start_armor rdf:resource="#armor_reaper"/>
+  <start_weapon rdf:resource="#weapon_m16"/>
+  <ap_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.15</ap_coeff>
+  <base_ap rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</base_ap>
+  <base_hp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</base_hp>
+  <hp_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.25</hp_coeff>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine Gunner</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_m16">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#machine_gunner"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pngimg.com/d/assault_rifle_PNG1436.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M16</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#necromant">
+  <rdf:type rdf:resource="#Mage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Necromant</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#paladin">
+  <rdf:type rdf:resource="#Warrior"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paladin</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sniper">
+  <rdf:type rdf:resource="#Shooter"/>
+  <start_armor rdf:resource="#armor_stealth"/>
+  <start_weapon rdf:resource="#weapon_m99"/>
+  <ap_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</ap_coeff>
+  <base_ap rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</base_ap>
+  <base_hp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</base_hp>
+  <hp_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</hp_coeff>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sniper</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_m99">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#sniper"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">225.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.gruenel.ch/includes/Navision/Images/ART/06_/oxFP-637226261888038756_06_6491_10_big_lang.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barret M99</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_as50">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#sniper"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">125.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://wf.cdn.gmru.net/wiki/images/7/71/Sr04.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AS50</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_m2010">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#sniper"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://images.free3d.com/imgd/l42427-m2010-esr-1338.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2010 Enhanced Sniper Rifle</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_m249">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#machine_gunner"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://liquipedia.net/commons/images/3/36/M249_new.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M249</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_mg3">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#machine_gunner"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/commons/e/ee/BundeswehrMG3_noBG.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MG3</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#weapon_pkm">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#machine_gunner"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pngimg.com/d/machine_gun_PNG27.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKM</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#wizard">
+  <rdf:type rdf:resource="#Mage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wizard</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#character2">
+  <rdf:type rdf:resource="#Character"/>
+  <character_class rdf:resource="#machine_gunner"/>
+  <equipped_weapon rdf:resource="#weapon_m16"/>
+  <equipped_armor rdf:resource="#armor_reaper"/>
+  <item_of_inv rdf:resource="#weapon_m16"/>
+  <item_of_inv rdf:resource="#armor_reaper"/>
+  <item_of_inv rdf:resource="#hp_kit_small"/>
+  <lvl rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lvl>
+  <ap rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</ap>
+  <hp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hp>
+  <exp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</exp>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#character3">
+  <rdf:type rdf:resource="#Character"/>
+  <character_class rdf:resource="#machine_gunner"/>
+  <equipped_weapon rdf:resource="#weapon_m16"/>
+  <equipped_armor rdf:resource="#armor_reaper"/>
+  <item_of_inv rdf:resource="#weapon_m16"/>
+  <item_of_inv rdf:resource="#armor_reaper"/>
+  <item_of_inv rdf:resource="#hp_kit_small"/>
+  <lvl rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lvl>
+  <ap rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</ap>
+  <hp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hp>
+  <exp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</exp>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Mage"/>
+    <rdf:Description rdf:about="#Shooter"/>
+    <rdf:Description rdf:about="#Warrior"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#HeavyArmor"/>
+    <rdf:Description rdf:about="#LightArmor"/>
+    <rdf:Description rdf:about="#MeduimArmor"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Armor"/>
+    <rdf:Description rdf:about="#HealingItem"/>
+    <rdf:Description rdf:about="#Weapon"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
