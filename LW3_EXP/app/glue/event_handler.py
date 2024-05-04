@@ -69,6 +69,11 @@ class EventHandler:
         event = self._handle_state()
         return event
     
+    def again(self) -> str | None:
+        self._player.die() 
+        self._state = GameState.idle
+        return 'New life begins!'
+    
     def _handle_state(self) -> str | None:
         if self._state == GameState.idle:
             return 'Nothing has happened! Continue walking...'
@@ -79,6 +84,9 @@ class EventHandler:
             enemy = self._create_enemy()
             self._current_enemy = enemy
             return 'Enemy!'
+        elif self.state == GameState.dead:
+            self._current_enemy = None                       
+            return 'You are dead! Begin again...'
     
     def enemy_interaction(self, _type: Literal['flee', 'attack', 'skip']) -> str | None:
         self._player.restore_ap()
@@ -146,6 +154,8 @@ class EventHandler:
         if self._current_enemy['ap'] < ap_cost:
             event += '\n' + '...but its AP weren\'t enough!'
             return event
+        else:
+            self._current_enemy['ap'] = self._current_enemy['ap'] - ap_cost
         
         # If AP are enough
         weapon_accuracy = self._current_enemy['equipped_weapon']['weapon_accuracy'][0]
@@ -160,14 +170,17 @@ class EventHandler:
             event = f'...and dealt {old_hp - self._player.hp} damage to you!'
             if self._player.hp <= 0:
                 event += '\n' + 'That attack killed you!'
-                self._state = GameState.dead                
+                self._state = GameState.dead
+                self._handle_state()                               
         return event
         
 
     def _kill_enemy(self) -> str | None:
         self._state = GameState.item
         self._current_enemy = None
-        return 'Enemy is defeated! Trying to find something useful...'    
+        event = 'Enemy is defeated! Trying to find something useful...'
+        event += '\n' + self._random_item()
+        return event    
     
     def _random_item(self) -> str:
         item = choice(self._onto.Item.instances())

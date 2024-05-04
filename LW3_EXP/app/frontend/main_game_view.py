@@ -103,12 +103,21 @@ class MainGameView:
             with cols[2]:
                 st.button('Attack', use_container_width=True,
                           key='fight_attack',
-                          on_click=lambda: self._enemy_interaction(event_handler, 'attack'))           
+                          on_click=lambda: self._enemy_interaction(event_handler, 'attack'))
+        elif event_handler.state == 'dead':
+            st.button(label='Begin again...', key='again_btn',
+                      help='Next step of your next life',
+                      on_click=lambda: self._again(event_handler),
+                      use_container_width=True)       
         else:
             st.button(label='Go ->', key='go_btn',
                       help='Next step of your life',
                       on_click=lambda: self._step(event_handler),
                       use_container_width=True)
+    
+    def _again(self, event_handler: EventHandler) -> None:
+        event = event_handler.again()
+        self._new_event(self._event_placeholder, event)
 
     def _step(self, event_handler: EventHandler) -> None:
         st.session_state.get('player').restore_ap()

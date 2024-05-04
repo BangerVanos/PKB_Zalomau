@@ -324,15 +324,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AS50</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#weapon_m249">
-  <rdf:type rdf:resource="#Firearm"/>
-  <used_only_by rdf:resource="#machine_gunner"/>
-  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</ap_cost>
-  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
-  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45</weapon_accuracy>
-  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</weapon_damage>
-  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://machinegunamericaorlando.com/wp-content/uploads/2016/08/fn-m249-saw-slr.png</sche:image>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M249</rdfs:label>
+<owl:NamedIndividual rdf:about="#sniper">
+  <rdf:type rdf:resource="#Shooter"/>
+  <start_armor rdf:resource="#armor_stealth"/>
+  <start_weapon rdf:resource="#weapon_m99"/>
+  <ap_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</ap_coeff>
+  <base_ap rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</base_ap>
+  <base_hp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</base_hp>
+  <hp_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</hp_coeff>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sniper</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#weapon_m99">
@@ -346,6 +346,17 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barret M99</rdfs:label>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#weapon_m249">
+  <rdf:type rdf:resource="#Firearm"/>
+  <used_only_by rdf:resource="#machine_gunner"/>
+  <ap_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</ap_cost>
+  <is_consumable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_consumable>
+  <weapon_accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45</weapon_accuracy>
+  <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</weapon_damage>
+  <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://machinegunamericaorlando.com/wp-content/uploads/2016/08/fn-m249-saw-slr.png</sche:image>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M249</rdfs:label>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#weapon_pkm">
   <rdf:type rdf:resource="#Firearm"/>
   <used_only_by rdf:resource="#machine_gunner"/>
@@ -355,17 +366,6 @@
   <weapon_damage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</weapon_damage>
   <sche:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pngimg.com/d/machine_gun_PNG27.png</sche:image>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKM</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#sniper">
-  <rdf:type rdf:resource="#Shooter"/>
-  <start_armor rdf:resource="#armor_stealth"/>
-  <start_weapon rdf:resource="#weapon_m99"/>
-  <ap_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</ap_coeff>
-  <base_ap rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</base_ap>
-  <base_hp rdf:datatype="http://www.w3.org/2001/XMLSchema#int">150</base_hp>
-  <hp_coeff rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</hp_coeff>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sniper</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#hp_kit_big">
@@ -412,9 +412,9 @@
   <character_class rdf:resource="#sniper"/>
   <equipped_weapon rdf:resource="#weapon_m99"/>
   <equipped_armor rdf:resource="#armor_stealth"/>
+  <item_of_inv rdf:resource="#hp_kit_small"/>
   <item_of_inv rdf:resource="#weapon_m99"/>
   <item_of_inv rdf:resource="#armor_stealth"/>
-  <item_of_inv rdf:resource="#hp_kit_small"/>
   <lvl rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lvl>
   <ap rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ap>
   <hp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</hp>

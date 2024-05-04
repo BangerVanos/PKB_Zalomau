@@ -74,13 +74,17 @@ class Player:
 
     def add_xp(self, xp: int) -> None:
         self._character.exp += xp
-        self._count_lvl()
+        self._count_lvl()    
 
     def _count_lvl(self) -> None:
         lvl_q = 1.5
         base_xp = 100
-        self._character.lvl = log(self._character.exp * (lvl_q - 1) / 
-                                  base_xp + 1, lvl_q)
+        old_lvl = self._character.lvl
+        self._character.lvl = floor(log(self._character.exp * (lvl_q - 1) / 
+                                    base_xp + 1, lvl_q))
+        if self._character.lvl > old_lvl:
+            self._character.hp = self.max_hp
+            self._character.ap = self.max_ap
 
     def restore_ap(self) -> None:
         self._character.ap = int(
@@ -101,9 +105,10 @@ class Player:
         self._character.ap = character_class.base_ap
         self._character.hp = character_class.base_hp
 
+        hp_kit = self._fetcher.fetch_by_uri('hp_kit_small')
         self._character.item_of_inv = [character_class.start_weapon,
                                        character_class.start_armor,
-                                       self._onto.hp_kit_small]          
+                                       hp_kit]          
     
     @property
     def character_json(self) -> dict:
@@ -142,10 +147,10 @@ class Player:
     def max_hp(self) -> int:
         base_hp = self._character.character_class.base_hp
         hp_coeff = self._character.character_class.hp_coeff
-        return base_hp*(hp_coeff**(self._character.lvl - 1))
+        return int(base_hp*(hp_coeff**(self._character.lvl - 1)))
     
     @property
     def max_ap(self) -> int:
         base_ap = self._character.character_class.base_ap
         ap_coeff = self._character.character_class.ap_coeff
-        return base_ap*(ap_coeff**(self._character.lvl - 1))
+        return int(base_ap*(ap_coeff**(self._character.lvl - 1)))
